@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gilles Dimbert — DRH opérationnel · Management de transition</title>
+<meta name="description" content="DRH opérationnel avec 30 ans d'expérience. Restructurations, PSE, transformation RH, management de transition ou CDI. Lyon · Mobilité nationale · Disponible juin 2026.">
+<meta property="og:title" content="Gilles Dimbert — DRH opérationnel">
+<meta property="og:description" content="30 ans d'expérience. 2 800 départs pilotés. Zéro jour de grève. Restructurations, transformation RH, management de transition.">
+<meta property="og:image" content="img/gilles-dimbert.jpg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/jpeg" href="img/gilles-dimbert.jpg">
+<link rel="apple-touch-icon" href="img/gilles-dimbert.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css?v=4">
+<link rel="stylesheet" href="css/nav.css?v=4">
+<link rel="stylesheet" href="css/hero.css?v=4">
+<link rel="stylesheet" href="css/sections.css?v=5">
+<link rel="stylesheet" href="css/parcours.css?v=4">
+<link rel="stylesheet" href="css/responsive.css?v=4">
+</head>
+<body>
+
+<!-- GRAIN -->
+<div id="grain"></div>
+
+<!-- SCROLL TO TOP -->
+<button id="scroll-top" onclick="window.innerWidth<=900?window.scrollTo({top:0,behavior:'smooth'}):lenis.scrollTo(0,{duration:1.4})" title="Haut de page">↑</button>
+
+<!-- THEME TOGGLE -->
+<button id="theme-toggle" onclick="document.body.classList.toggle('dark-theme');this.textContent=document.body.classList.contains('dark-theme')?'⬜ Fond clair':'⬛ Fond sombre'">⬛ Fond sombre</button>
+
+<!-- CURSOR -->
+<div id="cur"></div>
+<div id="cur-ring"></div>
+
+<!-- PROGRESS -->
+<div id="progress"></div>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-text">
+    <span id="lG">G</span><span id="lD">D</span>
+  </div>
+  <div class="loader-bar" id="loaderBar"></div>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">Gilles Dimbert</a>
+  <ul class="nav-links">
+    <li><a href="#apropos">Profil</a></li>
+    <li><a href="#expertises">Expertises</a></li>
+    <li><a href="#parcours">Parcours</a></li>
+    <li><a href="#temoignages">Témoignages</a></li>
+  </ul>
+  <a href="#contact" class="nav-contact">Contact</a>
+  <button class="nav-burger" id="navBurger" aria-label="Menu">
+    <span></span><span></span>
+  </button>
+</nav>
+
+<!-- MENU MOBILE -->
+<div id="mobileMenu">
+  <a href="#apropos" class="mm-link">Profil</a>
+  <a href="#expertises" class="mm-link">Expertises</a>
+  <a href="#parcours" class="mm-link">Parcours</a>
+  <a href="#temoignages" class="mm-link">Témoignages</a>
+  <a href="#contact" class="mm-link mm-contact">Contact</a>
+</div>
+
+<!-- SCROLL WRAPPER -->
+<div id="scroll-container">
+<div id="scroll-content">
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hero-bg-text" aria-hidden="true">DRH</div>
+  <div class="hero-label" id="heroLabel">DRH opérationnel · Management de transition</div>
+  <h1 class="hero-name" id="heroName">
+    <span class="word"><span class="word-inner">Gilles</span></span>
+    <span class="word"><span class="word-inner">Dimbert</span></span>
+  </h1>
+  <div class="hero-bottom">
+    <p class="hero-tagline" id="heroTagline">
+      Quand les décisions sont <em>sensibles</em>,<br>j'accompagne les dirigeants.
+    </p>
+    <div class="hero-right" id="heroRight">
+      <p>Lyon — mobilité nationale</p>
+      <p>Disponible juin 2026</p>
+      <p><a href="tel:0608468563">06 08 46 85 63</a></p>
+    </div>
+  </div>
+  <div class="hero-scroll-hint" id="heroScroll">
+    <span>Scroll</span>
+    <div class="scroll-dot"></div>
+  </div>
+</section>
+
+<!-- ═══ MARQUEE ═══ -->
+<section id="marquee" style="min-height:auto">
+  <div class="marquee-track">
+    <span class="item">30 ans d'expérience</span><span class="item sep">·</span>
+    <span class="item">2 800 départs pilotés</span><span class="item sep">·</span>
+    <span class="item">3 000 collaborateurs</span><span class="item sep">·</span>
+    <span class="item">0 jour de grève</span><span class="item sep">·</span>
+    <span class="item">Management de transition</span><span class="item sep">·</span>
+    <span class="item">DRH opérationnel</span><span class="item sep">·</span>
+    <span class="item">Lyon · Mobilité nationale</span><span class="item sep">·</span>
+    <span class="item">30 ans d'expérience</span><span class="item sep">·</span>
+    <span class="item">2 800 départs pilotés</span><span class="item sep">·</span>
+    <span class="item">3 000 collaborateurs</span><span class="item sep">·</span>
+    <span class="item">0 jour de grève</span><span class="item sep">·</span>
+    <span class="item">Management de transition</span><span class="item sep">·</span>
+    <span class="item">DRH opérationnel</span><span class="item sep">·</span>
+    <span class="item">Lyon · Mobilité nationale</span><span class="item sep">·</span>
+  </div>
+</section>
+
+<!-- ═══ PITCH ═══ -->
+<section id="pitch">
+  <div class="pitch-headline" id="pitchHeadline"></div>
+</section>
+
+<!-- ═══ PITCH CARDS ═══ -->
+<section id="pitch-cards" style="min-height:auto">
+  <div class="section-label">Profil</div>
+  <h2 class="section-title" style="margin-bottom:4rem">3 domaines d'intervention</h2>
+  <div class="pitch-grid">
+    <div class="pitch-item">
+      <p class="pitch-item-num">01</p>
+      <h3 class="pitch-item-title">Restructurations & crises sociales</h3>
+      <p class="pitch-item-text">PSE, fermetures de sites, procédures collectives, environnements sociaux dégradés. Zéro grève sur l'ensemble des interventions.</p>
+    </div>
+    <div class="pitch-item">
+      <p class="pitch-item-num">02</p>
+      <h3 class="pitch-item-title">Transformation & croissance</h3>
+      <p class="pitch-item-text">Carve-out, intégrations post-acquisition, réorganisations, forte croissance organique. +750 collaborateurs intégrés en 18 mois.</p>
+    </div>
+    <div class="pitch-item">
+      <p class="pitch-item-num">03</p>
+      <h3 class="pitch-item-title">Structuration de la fonction RH</h3>
+      <p class="pitch-item-text">Création et modernisation des DRH, déploiement SIRH, digitalisation, marque employeur. PME, ETI, groupes multi-sites.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ À PROPOS ═══ -->
+<section id="apropos" style="min-height:auto">
+  <div class="section-label">À propos</div>
+  <h2 class="section-title">DRH à la frontière du terrain et de la stratégie</h2>
+  <div class="apropos-grid">
+    <div class="apropos-photo">
+      <img src="img/gilles-dimbert.jpg" alt="Gilles Dimbert — DRH opérationnel">
+      <div class="apropos-photo-meta">
+        <strong>Formation</strong>
+        <p>Bac+5 — ISG Paris<br>Mastère en Ressources Humaines</p>
+        <p style="margin-top:1rem">Disponible <span style="color:var(--red)">juin 2026</span><br>Lyon · Mobilité nationale<br>Juge prud'homal depuis 2002</p>
+      </div>
+    </div>
+    <div class="apropos-content">
+      <p>DRH opérationnel intervenant en management de transition ou en CDI, j'accompagne les dirigeants confrontés à des décisions sociales sensibles et à des contextes organisationnels complexes.</p>
+      <p>Restructuration, crise sociale, transformation, croissance exigeante, carve-out ou vacance de poste RH : <strong>j'aide les entreprises à reprendre rapidement le contrôle des enjeux humains</strong>, préserver la continuité d'activité, puis structurer durablement leur fonction RH au service de la stratégie.</p>
+      <p>Fort de plus de <strong>30 ans d'expérience en groupes internationaux et ETI familiales</strong>, j'ai accompagné des organisations de 130 à plus de 3 000 collaborateurs, <strong>piloté plus de 2 800 départs</strong> (avec et sans PSE), des fermetures de sites, des procédures collectives, ainsi que des phases de forte croissance et d'intégration de +750 collaborateurs.</p>
+      <p>Ma spécificité est d'intervenir là où les équilibres sont fragiles, avec une <strong>crédibilité reconnue à la fois par les directions générales, les partenaires sociaux et les institutions</strong>. Mon style est pragmatique, orienté décision et responsabilité managériale.</p>
+      <div class="apropos-when">
+        <h3>Quand faire appel à moi ?</h3>
+        <ul>
+          <li>Une restructuration ou un plan social à conduire</li>
+          <li>Une situation sociale dégradée ou sensible</li>
+          <li>Une phase de transformation organisationnelle</li>
+          <li>Une forte croissance ou intégration post-acquisition</li>
+          <li>Un départ de DRH ou vacance nécessitant une intervention immédiate</li>
+          <li>Un besoin de sécurisation RH auprès du COMEX / CODIR</li>
+          <li>Une réorganisation de la fonction RH et digitalisation</li>
+          <li>Une capacité d'action en forte autonomie ou aux côtés d'un DG décisionnaire</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATS ═══ -->
+<section id="stats" style="min-height:auto">
+  <div class="stat-block">
+    <span class="stat-num" data-target="30">0<sup>+</sup></span>
+    <p class="stat-label">ans d'expérience<br>en groupes & ETI</p>
+  </div>
+  <div class="stat-block">
+    <span class="stat-num" data-target="2800">0<sup>+</sup></span>
+    <p class="stat-label">départs pilotés<br>avec & sans PSE</p>
+  </div>
+  <div class="stat-block">
+    <span class="stat-num" data-target="3000">0<sup>+</sup></span>
+    <p class="stat-label">collaborateurs<br>sous responsabilité</p>
+  </div>
+  <div class="stat-block">
+    <span class="stat-num" data-target="0">0</span>
+    <p class="stat-label">jour de grève<br>Wincanton · Bernard</p>
+  </div>
+</section>
+
+<!-- ═══ EXPERTISES ═══ -->
+<section id="expertises">
+  <div class="exp-pin" id="expPin">
+    <div class="exp-left">
+      <div class="exp-left-progress" id="expProgBar"></div>
+      <div class="section-label">Expertises</div>
+      <div class="exp-left-idx" id="expIdx">01 / 04</div>
+      <div class="exp-left-bignum" id="expBigNum">01</div>
+      <h3 class="exp-left-title" id="expBigTitle">Négociation</h3>
+    </div>
+    <div class="exp-right">
+      <div class="exp-right-inner" id="expRightInner">
+        <div class="exp-pin-card" id="epc0">
+          <span class="epc-num">01</span>
+          <h4 class="epc-title">Négociation</h4>
+          <p class="epc-desc">Gestion autonome de négociations syndicales dans des contextes parfois hostiles. Présidence de CSE (40 élus). Accords majoritaires en délais contraints.</p>
+        </div>
+        <div class="exp-pin-card" id="epc1">
+          <span class="epc-num">02</span>
+          <h4 class="epc-title">Transformation</h4>
+          <p class="epc-desc">Restructurations majeures, PSE, risques psychosociaux, droits d'alerte, autorités de tutelle. Croissance organique, carve-out, intégrations complexes.</p>
+        </div>
+        <div class="exp-pin-card" id="epc2">
+          <span class="epc-num">03</span>
+          <h4 class="epc-title">Pilotage RH</h4>
+          <p class="epc-desc">Management d'équipes RH de 2 à 30 personnes. Mise en place de politiques RH complètes. Relations sociales et protection collective.</p>
+        </div>
+        <div class="exp-pin-card" id="epc3">
+          <span class="epc-num">04</span>
+          <h4 class="epc-title">Modernisation</h4>
+          <p class="epc-desc">Implémentation SIRH, logiciels de paie, data RH, digitalisation des processus, marque employeur et transformation culturelle.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RÉALISATIONS ═══ -->
+<section id="realisations" style="min-height:auto">
+  <div class="section-label">Réalisations</div>
+  <h2 class="section-title">Missions & Impacts</h2>
+  <div class="real-tabs">
+    <button class="real-tab active" onclick="switchReal(0)">Restructurations</button>
+    <button class="real-tab" onclick="switchReal(1)">Croissance</button>
+    <button class="real-tab" onclick="switchReal(2)">Fonction RH</button>
+    <button class="real-tab" onclick="switchReal(3)">Coaching</button>
+  </div>
+  <div class="real-panel active" id="real-0">
+    <div class="real-col">
+      <h4>Contextes gérés</h4>
+      <ul>
+        <li>Restructurations avec et sans PSE</li>
+        <li>Fermetures de sites et procédures collectives</li>
+        <li>Environnements sociaux fortement dégradés</li>
+        <li>Droits d'alerte, RPS, autorités de tutelle</li>
+      </ul>
+    </div>
+    <div class="real-col">
+      <span class="real-big">2 800<sup>+</sup></span>
+      <span class="real-unit">départs pilotés au total</span>
+      <ul>
+        <li>800 départs sans PSE sécurisés</li>
+        <li>2 000 avec PSE, accords majoritaires</li>
+        <li>Fermeture Intermarché 130 lic. éco. en délais records</li>
+        <li>Liquidation Place du Marché — 2 200 collaborateurs</li>
+        <li>Zéro jour de grève sur toutes les restructurations</li>
+      </ul>
+    </div>
+  </div>
+  <div class="real-panel" id="real-1">
+    <div class="real-col">
+      <h4>Contextes gérés</h4>
+      <ul>
+        <li>Croissance rapide, réorganisations post-acquisition</li>
+        <li>Séparations d'activités (carve-out)</li>
+        <li>Harmonisation multi-conventions collectives</li>
+      </ul>
+    </div>
+    <div class="real-col">
+      <span class="real-big">+750</span>
+      <span class="real-unit">collaborateurs intégrés en 18 mois</span>
+      <ul>
+        <li>Intégrations sans rupture sociale</li>
+        <li>10+ conventions collectives harmonisées</li>
+        <li>+66% d'activité anticipé sur le pôle immobilier</li>
+        <li>Organisations RH alignées avec les enjeux business</li>
+      </ul>
+    </div>
+  </div>
+  <div class="real-panel" id="real-2">
+    <div class="real-col">
+      <h4>Contextes</h4>
+      <ul>
+        <li>PME, ETI et groupes multi-sites</li>
+        <li>Fonctions RH à structurer ou transformer</li>
+        <li>Digitalisation des processus RH</li>
+      </ul>
+    </div>
+    <div class="real-col">
+      <span class="real-big">10k<sup>+</sup></span>
+      <span class="real-unit">collaborateurs couverts par les SIRH déployés</span>
+      <ul>
+        <li>Création de directions RH from scratch</li>
+        <li>SIRH sur périmètre +10 000 collab. (Emil Frey)</li>
+        <li>Changements ADP, DECIDIUM, coffre-fort électronique</li>
+        <li>Structuration recrutement, GPEC, performance</li>
+      </ul>
+    </div>
+  </div>
+  <div class="real-panel" id="real-3">
+    <div class="real-col">
+      <h4>Interventions</h4>
+      <ul>
+        <li>Partenaire RH des dirigeants, COMEX et CODIR</li>
+        <li>Coaching individuel et collectif de managers</li>
+        <li>Accompagnement du changement en contexte sensible</li>
+      </ul>
+    </div>
+    <div class="real-col">
+      <span class="real-big">30<sup>+</sup></span>
+      <span class="real-unit">ans d'expérience en gestion RH</span>
+      <ul>
+        <li>Prise de décision sécurisée pour les dirigeants</li>
+        <li>Montée en maturité managériale des équipes</li>
+        <li>Coaching nouveaux membres CODIR (Groupe Bernard)</li>
+        <li>Meilleure adhésion aux projets de transformation</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MÉTHODE ═══ -->
+<section id="methode" style="min-height:auto">
+  <div class="method-pin-wrap" id="methodPin">
+    <div class="section-label">Méthode</div>
+    <h2 class="section-title">3 temps. 90 jours.</h2>
+    <div class="method-steps">
+      <div class="method-step">
+        <div class="method-step-num">01</div>
+        <div class="method-step-day">J+30</div>
+        <span class="method-step-tag">Compréhension & prise de contrôle</span>
+        <p class="method-step-desc">Contexte, enjeux humains et sociaux. Contact équipes, partenaires sociaux, direction. <strong style="color:var(--text)">Mise sous contrôle immédiate des sujets sensibles.</strong></p>
+      </div>
+      <div class="method-step">
+        <div class="method-step-num">02</div>
+        <div class="method-step-day">J+60</div>
+        <span class="method-step-tag">Structuration & sécurisation</span>
+        <p class="method-step-desc">Structuration des priorités, sécurisation du dialogue social. <strong style="color:var(--text)">Accompagnement des décisions de transformation.</strong></p>
+      </div>
+      <div class="method-step">
+        <div class="method-step-num">03</div>
+        <div class="method-step-day">J+90</div>
+        <span class="method-step-tag">Mise en œuvre & développement</span>
+        <p class="method-step-desc"><strong style="color:var(--text)">Bases RH robustes posées.</strong> Alignées avec les enjeux futurs. Organisation pérenne, autonome, performante.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PARCOURS ═══ -->
+<section id="parcours" style="min-height:auto">
+  <div class="section-label">Parcours</div>
+  <h2 class="section-title">30 ans. 7 entreprises.</h2>
+  <div class="tl2" id="tl2">
+    <div class="tl2-progress-track"><div class="tl2-progress-fill" id="tl2Fill"></div></div>
+
+    <!-- 01 -->
+    <div class="tl2-item">
+      <div class="tl2-bignum">01</div>
+      <div class="tl2-left">
+        <div class="tl2-meta"><span>2025–2026</span><span class="tl2-type-tag">Transition</span></div>
+        <h3 class="tl2-company">Groupe confidentiel</h3>
+        <div class="tl2-role">DRH · Management de transition</div>
+        <p class="tl2-context">Enseignement privé + immobilier + hôtellerie + résidences étudiantes · 7 campus · 700 salariés · Actionnariat familial</p>
+        <div class="tl2-footer">
+          <span class="tl2-tag r">Transition</span><span class="tl2-tag">700 sal.</span><span class="tl2-tag">Multi-activités</span>
+        </div>
+      </div>
+      <div class="tl2-right">
+        <div class="tl2-detail-group">
+          <span class="tl2-detail-label">Réorganisation & social — pôle enseignement</span>
+          <ul class="tl2-detail-list">
+            <li>Structuration équipe RH ; mise en place de process internes</li>
+            <li>Contexte syndical conflictuel ; droits d'alerte locaux</li>
+            <li>Contentieux judiciaires à forts enjeux</li>
+            <li>Restructuration interne (−15 % des effectifs)</li>
+            <li>Mise en place politique GPEC globale</li>
+          </ul>
+        </div>
+        <div class="tl2-detail-group">
+          <span class="tl2-detail-label">Croissance — pôle immobilier / promotion</span>
+          <ul class="tl2-detail-list">
+            <li>+66 % d'activité anticipé (3 000 → 5 000 logements en 36 mois)</li>
+            <li>Organisation managériale, nouveaux process, plan de formation</li>
+            <li>Identification des compétences nécessaires et recrutements ciblés</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 -->
+    <div class="tl2-item">
+      <div class="tl2-bignum">02</div>
+      <div class="tl2-left">
+        <div class="tl2-meta"><span>2025</span><span class="tl2-type-tag">Transition</span></div>
+        <img src="logos/intermarche.png" alt="Intermarché" class="tl2-logo">
+        <h3 class="tl2-company">Intermarché<br>Pennes Mirabeau</h3>
+        <div class="tl2-role">DRH · Management de transition</div>
+        <p class="tl2-context">130 salariés · Distribution alimentaire BtoC · Contexte syndical Marseille Nord</p>
+        <div class="tl2-footer">
+          <span class="tl2-tag r">Transition</span><span class="tl2-tag">130 lic. éco.</span><span class="tl2-tag">PSE</span>
+        </div>
+      </div>
+      <div class="tl2-right">
+        <div class="tl2-detail-group">
+          <span class="tl2-detail-label">PSE & fermeture totale</span>
+          <ul class="tl2-detail-list">
+            <li>Pilotage et mise en œuvre PSE ; 130 licenciements économiques</li>
+            <li>Signature accord majoritaire Livre 1 en délais records</li>
+            <li>Négociation DDETS, Médecine du Travail</li>
+            <li>Cabinet outplacement Alixio Mobilité ; expertise SECAFI</li>
+            <li>Procédure Florange ; RPS Livre 4</li>
+            <li>Participation cellule de pilotage — fermeture de 29 supermarchés et hypermarchés</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 -->
+    <div class="tl2-item">
+      <div class="tl2-bignum">03</div>
+      <div class="tl2-left">
+        <div class="tl2-meta"><span>2020–2025</span><span class="tl2-type-tag">CDI</span></div>
+        <img src="logos/place-du-marche.png" alt="Place du Marché" class="tl2-logo">
+        <h3 class="tl2-company">Place du Marché<br><span style="opacity:.55;font-size:.65em">Toupargel</span></h3>
+        <div class="tl2-role">DRH puis Mandataire social · CDI</div>
+        <p class="tl2-context">2 200 collab. · 150 sites · 190 M€ CA · Distribution alimentaire BtoC · Management équipe RH 25 pers.</p>
+        <div class="tl2-footer">
+          <span class="tl2-tag r">CDI</span><span class="tl2-tag">2 200 sal.</span><span class="tl2-tag">Mandataire social</span>
+        </div>
+      </div>
+      <div class="tl2-right">
+        <div class="tl2-detail-group">
+          <span class="tl2-detail-label">Build & culture</span>
+          <ul class="tl2-detail-list">
+            <li>Refonte statut collectif : organisation du travail, rémunérations, protection collective — 100 % des accords signés</li>
+            <li>People review, plan de formation, création SST</li>
+            <li>Changement logiciel de paie (ADP) ; digitalisation (AMOA avec IMPLID)</li>
+          </ul>
+        </div>
+        <div class="tl2-detail-group">
+          <span class="tl2-detail-label">Restructuration & liquidation</span>
+          <ul class="tl2-detail-list">
+            <li>Réduction significative des effectifs (plusieurs centaines de départs en 36 mois)</li>
+            <li>Mandataire social : liquidation judiciaire — 2 200 licenciements économiques</li>
+            <li>Gestion de grèves sur les plateformes logistiques ; organes de procédure</li>
+            <li>Cabinet outplacement LHH</li>
+            <li>Depuis 04.2023 : Président du Family Office français des cofondateurs de Grand Frais</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 -->
+    <div class="tl2-item">
+      <div class="tl2-bignum">04</div>
+      <div class="tl2-left">
+        <div class="tl2-meta"><span>2012–2020</span><span class="tl2-type-tag">CDI</span></div>
+        <h3 class="tl2-company">Groupe Bernard</h3>
+        <div class="tl2-role">DRH · CDI</div>
+        <p class="tl2-context">3 000 collab. · 100 sites · 1,2 Md€ CA · Distribution automobile · Management équipe RH 30 pers. + opé. 150 pers.</p>
+        <div class="tl2-footer">
+          <span class="tl2-tag r">CDI</span><span class="tl2-tag">3 000 sal.</span><span class="tl2-tag">DGO</span>
+          <a href="https://www.largus.fr/pros/actualite-automobile/gilles-messier-prend-la-direction-generale-du-groupe-bernard-5763384.html" target="_blank" class="tl2-ref">L'Argus</a>
+        </div>
+      </div>
+      <div class="tl2-right">
+        <div class="tl2-detail-group">
+          <span class="tl2-detail-label">Réorganisation & social</span>
+          <ul class="tl2-detail-list">
+            <li>Restructuration ; −190 postes en 6 mois — zéro jour de grève</li>
+          </ul>
+        </div>
+        <div class="tl2-detail-group">
+          <span class="tl2-detail-label">Croissance & structuration</span>
+          <ul class="tl2-detail-list">
+            <li>Hyper croissance externe ; +750 collaborateurs en 18 mois</li>
+            <li>Création SIRH global (onboarding, GPEC, masse salariale, dashboard, EVP) — commercialisé au groupe Emil Frey</li>
+            <li>Marque employeur ; label Happy at Work ; digitalisation RH (DECIDIUM)</li>
+            <li>Audit et appel d'offre protection collective</li>
+            <li>Coaching nouveaux membres Comité de Direction</li>
+          </ul>
+        </div>
+        <div class="tl2-detail-group">
+          <span class="tl2-detail-label">Direction générale opérationnelle (2016–2020)</span>
+          <ul class="tl2-detail-list">
+            <li>Création d'une nouvelle branche : call center interne, 1er franchisé Hertz France (15 agences), vente aux enchères, location engins de manutention, réseau 20 pts de vente VO</li>
+            <li>Redressement : CA +20 %, RN +30 %</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 -->
+    <div class="tl2-item">
+      <div class="tl2-bignum">05</div>
+      <div class="tl2-left">
+        <div class="tl2-meta"><span>2000–2011</span><span class="tl2-type-tag">CDI</span></div>
+        <img src="logos/wincanton.png" alt="Wincanton" class="tl2-logo">
+        <h3 class="tl2-company">Wincanton</h3>
+        <div class="tl2-role">DRH · CDI</div>
+        <p class="tl2-context">2 500 collab. · 30 sites · 200 M€ CA · Logistique & Transport BtoB · Groupe anglais 32 000 sal.</p>
+        <div class="tl2-footer">
+          <span class="tl2-tag r">CDI</span><span class="tl2-tag">2 500 sal.</span><span class="tl2-tag">Groupe anglais</span>
+          <a href="https://supplychainmagazine.fr/nl/2012/trois-nouvelles-tetes-chez-tlf/" target="_blank" class="tl2-ref">Supply Chain Mag</a>
+          <a href="https://www.unsa.org/IMG/pdf/jo9122022nominations_conseillers_prud_hommes.pdf" target="_blank" class="tl2-ref">JO — Prud'hommes</a>
+        </div>
+      </div>
+      <div class="tl2-right">
+        <div class="tl2-detail-group">
+          <span class="tl2-detail-label">Restructurations & social</span>
+          <ul class="tl2-detail-list">
+            <li>20 PSE en 11 ans ; +1 500 licenciements — zéro jour de grève</li>
+            <li>Carve-out ; intégration +700 collaborateurs ; convergence des statuts collectifs</li>
+            <li>10+ conventions collectives harmonisées ; recrutements en contexte de pénurie</li>
+            <li>Négociation accords de méthode</li>
+          </ul>
+        </div>
+        <div class="tl2-detail-group">
+          <span class="tl2-detail-label">Build & culture</span>
+          <ul class="tl2-detail-list">
+            <li>Négociation du statut collectif ayant servi de référence à la CCN</li>
+            <li>Directeur de la communication interne</li>
+            <li>Évènements pour favoriser la transversalité (concours meilleurs cariste, innovation SSCT...)</li>
+            <li>Mise en place d'ambassadeurs</li>
+          </ul>
+        </div>
+        <div class="tl2-detail-group">
+          <span class="tl2-detail-label">Rôles complémentaires</span>
+          <ul class="tl2-detail-list">
+            <li>Administrateur TLF — syndicat patronal national Transport & Logistique</li>
+            <li>Co-Président commission sociale nationale TLF</li>
+            <li>Administrateur OCPO transport (financement de la formation)</li>
+            <li>Administrateur Klesia (mutuelle & prévoyance de branche)</li>
+            <li>Administrateur GNFA (organisme de formation de branche)</li>
+            <li>Négociateur États Généraux du Transport — patronage Ministère</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 -->
+    <div class="tl2-item">
+      <div class="tl2-bignum">06</div>
+      <div class="tl2-left">
+        <div class="tl2-meta"><span>1995–2000</span><span class="tl2-type-tag">CDI</span></div>
+        <img src="logos/alstom.png" alt="Alstom Power" class="tl2-logo">
+        <h3 class="tl2-company">Alstom Power</h3>
+        <div class="tl2-role">DRH · Responsable formation · CDI</div>
+        <p class="tl2-context">1 200 collab. · Fabrication de turbines · Industrie lourde · Management équipe RH 15 pers.</p>
+        <div class="tl2-footer">
+          <span class="tl2-tag r">CDI</span><span class="tl2-tag">1 200 sal.</span><span class="tl2-tag">Industrie</span>
+        </div>
+      </div>
+      <div class="tl2-right">
+        <div class="tl2-detail-group">
+          <span class="tl2-detail-label">Restructuration & fermeture d'usine</span>
+          <ul class="tl2-detail-list">
+            <li>PSE et fermeture d'usine ; crise amiante</li>
+            <li>Expérience de séquestration</li>
+            <li>Groupe à organisation matricielle internationale — approche politique nécessaire</li>
+          </ul>
+        </div>
+        <div class="tl2-detail-group">
+          <span class="tl2-detail-label">Build & culture</span>
+          <ul class="tl2-detail-list">
+            <li>Pyramide des âges très défavorable — vaste plan de gestion des emplois et des carrières</li>
+            <li>Transformation en profondeur de plusieurs emplois et filières</li>
+            <li>GPEC ; transformation profonde des métiers et des compétences</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 -->
+    <div class="tl2-item">
+      <div class="tl2-bignum">07</div>
+      <div class="tl2-left">
+        <div class="tl2-meta"><span>1993–1995</span><span class="tl2-type-tag">CDD</span></div>
+        <img src="logos/thales.png" alt="Thomson · Thalès" class="tl2-logo">
+        <h3 class="tl2-company">Thomson · Thalès</h3>
+        <div class="tl2-role">Contrôleur financier · CDD</div>
+        <p class="tl2-context">1 000 collab. · Industrie défense · Groupe matriciel international</p>
+        <div class="tl2-footer">
+          <span class="tl2-tag">CDD</span><span class="tl2-tag">Défense</span>
+        </div>
+      </div>
+      <div class="tl2-right">
+        <div class="tl2-detail-group">
+          <span class="tl2-detail-label">Finance & contrôle</span>
+          <ul class="tl2-detail-list">
+            <li>Contrôle financier d'usines dans un groupe matriciel international</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ TÉMOIGNAGES ═══ -->
+<section id="temoignages" style="min-height:auto">
+  <div class="section-label">Témoignages</div>
+  <h2 class="section-title">Ils témoignent</h2>
+  <div class="testi-tabs">
+    <button class="testi-tab active" onclick="switchTesti(0)">Directions &amp; COMEX</button>
+    <button class="testi-tab" onclick="switchTesti(1)">Dialogue social &amp; Institutions</button>
+    <button class="testi-tab" onclick="switchTesti(2)">Experts &amp; Équipes</button>
+  </div>
+
+  <!-- Panel 0 : Directions & COMEX -->
+  <div class="testi-panel active" id="testi-0">
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p class="testi-quote">« Gilles a été un collaborateur précieux lors de la restructuration du groupe Bernard. »</p>
+        <div class="testi-author"><strong>Jean-Pierre Laurent</strong><span>Directeur Général — Groupe Bernard</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Leader engagé, Gilles sait gérer des situations complexes et proposer des transformations pertinentes, avec une vision transverse du business. »</p>
+        <div class="testi-author"><strong>Gilles Messier</strong><span>Directeur Général — Groupe Bernard</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Gilles sait trouver des solutions pragmatiques et adaptées à chaque activité. Il travaille vite et bien. »</p>
+        <div class="testi-author"><strong>Laurent Farman</strong><span>Directeur Général Trucks — Groupe Bernard</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Gilles allie une grande capacité d'analyse à une remise en question permanente, faisant de lui un partenaire efficace. »</p>
+        <div class="testi-author"><strong>Philippe Gagnepain</strong><span>DG Mercedes-Benz Trucks — Groupe Bernard</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Gilles a su restaurer la confiance des salariés et des IRP, tout en menant des transformations profondes avec humanité et efficacité. Homme d'engagement, il a accompagné les équipes jusqu'au dernier jour dans un contexte de grande difficulté. »</p>
+        <div class="testi-author"><strong>Brieuc Fruchon</strong><span>Président — Place du Marché</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Avec sa solidité professionnelle, Gilles a toujours été respecté par l'ensemble des syndicats et partenaires sociaux. »</p>
+        <div class="testi-author"><strong>Egbert Maagd</strong><span>DG Europe de l'Ouest — Wincanton</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Gilles is a highly experienced international HR Director and a key contributor to European management teams. »</p>
+        <div class="testi-author"><strong>Nigel Sullivan</strong><span>Group HR Director — Wincanton</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Dans un contexte particulièrement sensible, les objectifs fixés par la Direction Générale ont été atteints grâce à son sens de l'écoute et sa capacité à instaurer un climat de confiance. »</p>
+        <div class="testi-author"><strong>Gérard Lejay</strong><span>DG Associé — Intermarché ITMAI</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Gilles possède une vision globale de l'entreprise et une capacité rare à résoudre rapidement les problématiques les plus complexes. »</p>
+        <div class="testi-author"><strong>Jean-Michel Galand</strong><span>Responsable Régional Logistique — Wincanton</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Intervenant dès la phase commerciale puis de due diligence sociale, Gilles a fait de la reprise de personnel un facteur différenciant dans la stratégie de développement du groupe. »</p>
+        <div class="testi-author"><strong>Thierry Lambert</strong><span>Directeur Bureau d'études — Wincanton</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Sa vision à 360° nous a permis de mener des transformations profondes en tenant compte de l'accompagnement humain. »</p>
+        <div class="testi-author"><strong>Pierre-Yves Cherblanc</strong><span>Directeur Commercial — Place du Marché</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Gilles combine vision stratégique, leadership managérial et expertise RH pour fédérer les équipes autour des enjeux les plus exigeants. »</p>
+        <div class="testi-author"><strong>Eric Sarrazin</strong><span>Directeur Régional — Place du Marché</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel 1 : Dialogue social & Institutions -->
+  <div class="testi-panel" id="testi-1">
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p class="testi-quote">« Gilles est un professionnel respecté, y compris par les partenaires sociaux, pour sa loyauté et son sens du dialogue. »</p>
+        <div class="testi-author"><strong>Patrick Van Craeyenest</strong><span>Bureau fédéral CGT Transport</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Sur un site particulièrement complexe, Gilles a su s'adapter très rapidement et contribuer à un résultat collectif inespéré. »</p>
+        <div class="testi-author"><strong>Eric Maury</strong><span>Directeur Affaires Sociales Groupe — Intermarché</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Gilles a su s'intégrer immédiatement dans un contexte délicat et faire équipe avec efficacité et engagement. »</p>
+        <div class="testi-author"><strong>Patricia Cadoux</strong><span>DRH Groupe — Intermarché</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Les délais ont été respectés et les objectifs atteints, avec l'obtention d'un accord majoritaire auprès des organisations syndicales. »</p>
+        <div class="testi-author"><strong>Maxime Poznanski</strong><span>Responsable Pôle RH — Intermarché</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Esprit de décision, facilitateur et grand manager, il a su embarquer les équipes dans des projets structurants. »</p>
+        <div class="testi-author"><strong>Manuel Martin</strong><span>Délégué Syndical Central CFDT — Wincanton</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Grâce à son écoute et une préparation sans faille, Gilles a instauré un dialogue social apaisé et constructif, y compris en période de crise comme la pandémie de Covid. »</p>
+        <div class="testi-author"><strong>Chadia Breavoine</strong><span>Élue CSE — Place du Marché</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« DRH loyal et respectueux de la parole donnée, Gilles sait construire des compromis durables même en situation de conflit. »</p>
+        <div class="testi-author"><strong>Jean-Marc Folens</strong><span>Délégué Syndical Central FO — Wincanton</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Professionnel de la négociation, respect de la parole donnée et recherche constante du compromis gagnant-gagnant. »</p>
+        <div class="testi-author"><strong>Philippe Choutet</strong><span>Directeur Juridique &amp; Négociateur de Branche — TLF</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Organisation rigoureuse, délais tenus et transmission exemplaire des dossiers, au bénéfice direct des salariés. »</p>
+        <div class="testi-author"><strong>Direction Générale France Travail</strong><span>Dossier Place du Marché</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Organisation remarquable, communication fluide et délais tenus : la cellule liquidative pilotée par Gilles Dimbert a permis une prise en charge rapide et efficace des salariés, dans un contexte pourtant très contraint. »</p>
+        <div class="testi-author"><strong>Direction de Projet — LHH</strong><span>Dossier Place du Marché</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel 2 : Experts & Équipes -->
+  <div class="testi-panel" id="testi-2">
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p class="testi-quote">« Gilles a démontré une capacité exceptionnelle à gérer des contextes sociaux à très forts enjeux et à gagner le respect des partenaires sociaux. »</p>
+        <div class="testi-author"><strong>Gérard Cambrune</strong><span>DRH — Alstom Power</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Les modules SIRH développés couvrent l'ensemble du spectre RH sur un périmètre de plus de 10 000 collaborateurs. »</p>
+        <div class="testi-author"><strong>Emmanuel Lemoine</strong><span>DRH — Emil Frey France</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Grâce à son approche pragmatique et sa compréhension des nouvelles technologies, Gilles met en place des solutions concrètes au service de la performance. »</p>
+        <div class="testi-author"><strong>Olivier Carré-Pierrat</strong><span>DSI — Place du Marché</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Partenaire exigeant et constructif, Gilles a contribué à des résultats concrets et mesurables. »</p>
+        <div class="testi-author"><strong>Sébastien Alburquerque</strong><span>Directeur des Opérations — ADP</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Esprit vif, forte expertise technique RH et grande rigueur : Gilles dispose d'une capacité rare à décider avec justesse. »</p>
+        <div class="testi-author"><strong>Hervé de Veyrac</strong><span>Agent Général Allianz &amp; Courtier</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Manager pragmatique et fédérateur, Gilles sait accompagner, rassurer et faire grandir les équipes. »</p>
+        <div class="testi-author"><strong>Manuel Fernandes</strong><span>Directeur Région Centre Renault Trucks — Groupe Bernard</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Gilles a à cœur de transmettre et de faire grandir ses collaborateurs dès leurs premières expériences professionnelles. »</p>
+        <div class="testi-author"><strong>Alexia Audouard</strong><span>Gestionnaire RH — Groupe Bernard</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Manager accessible et positif, Gilles sait écouter, conseiller et aider dans des contextes RH exigeants. »</p>
+        <div class="testi-author"><strong>Angélique Fruteau</strong><span>Responsable RH Sud-Est — Intermarché</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Gilles allie rigueur analytique et approche humaine, un équilibre essentiel pour un DRH de haut niveau. »</p>
+        <div class="testi-author"><strong>Elodie Estrabol</strong><span>Gestionnaire RH — Wincanton</span></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">« Par son exigence et ses valeurs humaines, Gilles accompagne et fait grandir les professionnels RH, en leur transmettant une vision lucide et engagée du métier. »</p>
+        <div class="testi-author"><strong>Marine Baconnier</strong><span>Gestionnaire RH — Wincanton</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SOURCES ═══ -->
+<section id="sources" style="min-height:auto">
+  <div class="section-label">Références</div>
+  <h2 class="section-title">Sources publiques</h2>
+  <p class="sources-intro">Certains contextes d'intervention évoqués sont documentés par des sources publiques, institutionnelles ou professionnelles indépendantes.</p>
+  <ul class="sources-list">
+    <li>
+      <a href="https://www.largus.fr/pros/actualite-automobile/gilles-messier-prend-la-direction-generale-du-groupe-bernard-5763384.html" target="_blank">
+        <span class="src-badge">L'Argus</span>
+        <span class="src-title">Groupe Bernard – stratégie et gouvernance</span>
+        <span class="src-arrow">↗</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.unsa.org/IMG/pdf/jo9122022nominations_conseillers_prud_hommes.pdf" target="_blank">
+        <span class="src-badge">Journal Officiel</span>
+        <span class="src-title">Nomination de conseillers prud'hommes (p. 63)</span>
+        <span class="src-arrow">↗</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://portail.documentation.developpement-durable.gouv.fr/exl-php/document-affiche/mte_recherche_avancee/OUVRE_DOC/4584?fic=itmouv00113840.pdf" target="_blank">
+        <span class="src-badge">Min. Transition écologique</span>
+        <span class="src-title">États généraux du transport (p. 34)</span>
+        <span class="src-arrow">↗</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://supplychainmagazine.fr/nl/2012/trois-nouvelles-tetes-chez-tlf/" target="_blank">
+        <span class="src-badge">Supply Chain Magazine</span>
+        <span class="src-title">Commission sociale TLF</span>
+        <span class="src-arrow">↗</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://fr.wikipedia.org/wiki/Groupe_Toupargel#Difficult%C3%A9s" target="_blank">
+        <span class="src-badge">Wikipédia</span>
+        <span class="src-title">Groupe Toupargel / Place du Marché – contexte économique</span>
+        <span class="src-arrow">↗</span>
+      </a>
+    </li>
+  </ul>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact">
+  <h2 class="contact-big">Vous faites face à une <em>situation sensible</em>&nbsp;?</h2>
+  <div class="contact-grid">
+    <a href="tel:0608468563" class="contact-item">
+      <span class="ico">✆</span>06 08 46 85 63
+    </a>
+    <a href="mailto:gilles.dimbert@gmail.com" class="contact-item">
+      <span class="ico">@</span>gilles.dimbert@gmail.com
+    </a>
+    <a href="https://www.linkedin.com/in/gilles-dimbert" target="_blank" class="contact-item">
+      <span class="ico">in</span>LinkedIn
+    </a>
+  </div>
+  <p class="contact-avail">Disponible <span>juin 2026</span> · Lyon · Mobilité nationale · Juge prud'homal depuis 2002</p>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <p>© 2026 Gilles Dimbert · DRH opérationnel</p>
+  <div class="footer-links">
+    <a href="tel:0608468563">06 08 46 85 63</a>
+    <a href="mailto:gilles.dimbert@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/gilles-dimbert" target="_blank">LinkedIn</a>
+  </div>
+</footer>
+
+</div><!-- /scroll-content -->
+</div><!-- /scroll-container -->
+
+<!-- SCRIPTS — ordre : libs → main → animations → ui -->
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/ui.js"></script>
+
+</body>
+</html>

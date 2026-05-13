@@ -1,0 +1,166 @@
+/* ═══════════════════════════════════════
+   RESPONSIVE — mobile ≤ 900px
+═══════════════════════════════════════ */
+@media(max-width:900px){
+  html{overflow-x:hidden;overflow-y:auto;height:auto}
+  body{overflow-x:hidden;overflow-y:auto;cursor:auto;height:auto}
+  #scroll-container{position:static;overflow:visible;height:auto}
+  #scroll-content{transform:none!important;height:auto}
+
+  /* Cursor — caché sur touch */
+  #cur,#cur-ring{display:none}
+
+  /* Désactiver animations GSAP scroll-triggered — tout visible d'emblée */
+  .pitch-item,
+  .stat-block,
+  .testi-card,
+  .method-step,
+  .apropos-when li,
+  .tl2-item,
+  .apropos-photo img,
+  .apropos-photo-meta,
+  .contact-big,
+  .contact-grid,
+  .section-label{
+    clip-path:none!important;
+    opacity:1!important;
+    transform:none!important;
+  }
+  .line-inner{transform:none!important}
+  .apropos-content p{opacity:1!important;transform:none!important}
+  .tl2-company{opacity:1!important;transform:none!important}
+
+  /* Nav */
+  .nav-links{display:none}
+  .nav-contact{display:none}
+  nav{padding:0 5vw}
+  .nav-burger{display:flex}
+
+  /* Hero */
+  #hero{padding:80px 5vw 4rem}
+  .hero-bottom{flex-direction:column;align-items:flex-start;gap:1.5rem}
+  .hero-right{text-align:left}
+  .hero-scroll-hint{display:none}
+
+  /* Pitch */
+  #pitch{display:none}
+
+  /* Sections — padding réduit */
+  #pitch-cards,#apropos,#expertises,#methode,
+  #realisations,#parcours,#temoignages,#sources,#contact{
+    padding-top:3rem;padding-bottom:3rem;
+    padding-left:5vw;padding-right:5vw;
+  }
+
+  /* Stats */
+  #stats{grid-template-columns:1fr 1fr;padding:3rem 5vw}
+  .stat-block:nth-child(2){border-right:none}
+  .stat-block:nth-child(3),.stat-block:nth-child(4){border-top:1px solid var(--border)}
+
+  /* Pitch cards */
+  .pitch-grid{grid-template-columns:1fr}
+
+  /* À propos */
+  .apropos-grid{grid-template-columns:1fr;gap:3rem}
+  .apropos-photo{position:static}
+  .apropos-when ul{grid-template-columns:1fr}
+
+  /* Expertises */
+  .exp-pin{grid-template-columns:1fr;gap:0}
+  .exp-left{position:static;border-right:none;border-bottom:none;padding:0 0 2rem 0;margin-bottom:0}
+  .exp-left-progress,.exp-left-bignum,.exp-left-idx,.exp-left-title{display:none}
+  .exp-right{height:auto}
+  .exp-right-inner{background:none;gap:0}
+  .exp-pin-card{min-height:auto;padding:1.8rem 0;border-top:1px solid var(--border)}
+  .exp-pin-card:last-child{border-bottom:1px solid var(--border)}
+
+  /* Méthode */
+  .method-steps{grid-template-columns:1fr}
+  .method-step{border-right:none;border-bottom:1px solid var(--border)}
+
+  /* Réalisations */
+  .real-tabs{overflow-x:auto;white-space:nowrap;padding-bottom:.5rem}
+  .real-tab{white-space:nowrap;padding:.8rem 1.2rem}
+  .real-panel.active{grid-template-columns:1fr}
+
+  /* Parcours */
+  .tl2-item{grid-template-columns:1fr;gap:2rem}
+  .tl2-right{border-left:none;padding-left:0;border-top:1px solid var(--border);padding-top:2rem}
+  .tl2-item.tl2-inactive{opacity:.3!important}
+  .tl2-item.tl2-active{opacity:1!important}
+
+  /* Témoignages — carousel swipeable */
+  .testi-panel.active{display:block}
+  .testi-grid{
+    display:flex;
+    overflow-x:scroll;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    gap:1rem;
+    background:none;
+    border:none;
+    padding-bottom:1rem;
+    scrollbar-width:none;
+    margin:0 -5vw;
+    padding-left:5vw;
+    padding-right:5vw;
+  }
+  .testi-grid::-webkit-scrollbar{display:none}
+  .testi-card{
+    flex:0 0 82vw;
+    scroll-snap-align:start;
+    padding:2rem 1.6rem;
+    border:1px solid var(--border);
+    background:var(--bg);
+  }
+  .testi-tabs{overflow-x:auto;white-space:nowrap}
+  .testi-tab{padding:.8rem 1.2rem;white-space:nowrap}
+
+  /* Sources */
+  .sources-list{border-top:none;gap:.5rem;display:flex;flex-direction:column}
+  .sources-list li{border-bottom:none}
+  .sources-list a{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    padding:1.1rem 1.2rem;
+    background:var(--bg2);
+    border:1px solid var(--border);
+    text-decoration:none;
+    transition:border-color .3s;
+  }
+  .sources-list a:hover{border-color:var(--red)}
+  .src-badge{
+    flex-shrink:0;
+    font-size:.52rem;letter-spacing:.15em;
+    padding:.3rem .6rem;
+    white-space:nowrap;
+  }
+  .src-title{
+    flex:1;
+    font-size:.78rem;line-height:1.45;
+    color:var(--text);
+  }
+  .src-arrow{flex-shrink:0;font-size:.9rem;color:var(--text-dim)}
+
+  /* Contact */
+  .contact-big{font-size:clamp(1.6rem,7vw,2.2rem);margin-bottom:2rem;line-height:1.2}
+  .contact-grid{display:flex;gap:1rem;max-width:100%;background:none;border:none}
+  .contact-item{flex:1;padding:1.4rem;justify-content:center;align-items:center;gap:0;border:1px solid var(--border);font-size:0}
+  .contact-item .ico{width:36px;height:36px;font-size:1.1rem;border:none;display:flex;align-items:center;justify-content:center}
+  .contact-avail{margin-top:1.8rem;line-height:1.9}
+
+  /* Footer */
+  footer{flex-direction:column;gap:1rem;padding:2rem 5vw}
+
+  /* ─── REVEAL ANIMATIONS ─── */
+  .mob-reveal{
+    opacity:0!important;
+    transform:translateY(22px)!important;
+    transition:opacity .5s ease,transform .55s ease;
+  }
+  .mob-revealed{
+    opacity:1!important;
+    transform:translateY(0)!important;
+  }
+}

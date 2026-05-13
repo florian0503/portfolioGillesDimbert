@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gilles Dimbert — DRH opérationnel · Management de transition</title>
+<meta name="description" content="DRH opérationnel avec 30 ans d'expérience. Restructurations, PSE, transformation RH, management de transition ou CDI. Lyon · Mobilité nationale · Disponible {{ contact.availability }}.">
+<meta property="og:title" content="Gilles Dimbert — DRH opérationnel">
+<meta property="og:description" content="30 ans d'expérience. 2 800 départs pilotés. Zéro jour de grève. Restructurations, transformation RH, management de transition.">
+<meta property="og:image" content="img/gilles-dimbert.jpg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/jpeg" href="img/gilles-dimbert.jpg">
+<link rel="apple-touch-icon" href="img/gilles-dimbert.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css?v=6">
+<link rel="stylesheet" href="css/nav.css?v=4">
+<link rel="stylesheet" href="css/hero.css?v=4">
+<link rel="stylesheet" href="css/sections.css?v=7">
+<link rel="stylesheet" href="css/parcours.css?v=6">
+<link rel="stylesheet" href="css/responsive.css?v=4">
+</head>
+<body>
+
+<div id="grain"></div>
+
+<button id="scroll-top" onclick="window.innerWidth<=900?window.scrollTo({top:0,behavior:'smooth'}):lenis.scrollTo(0,{duration:1.4})" title="Haut de page">↑</button>
+<button id="theme-toggle" onclick="document.body.classList.toggle('dark-theme');this.textContent=document.body.classList.contains('dark-theme')?'⬜ Fond clair':'⬛ Fond sombre'">⬛ Fond sombre</button>
+
+<div id="cur"></div>
+<div id="cur-ring"></div>
+<div id="progress"></div>
+
+<div id="loader">
+  <div class="loader-text">
+    <span id="lG">G</span><span id="lD">D</span>
+  </div>
+  <div class="loader-bar" id="loaderBar"></div>
+</div>
+
+<nav id="nav">
+  <a href="#hero" class="nav-logo">Gilles Dimbert</a>
+  <ul class="nav-links">
+    <li><a href="#apropos">Profil</a></li>
+    <li><a href="#expertises">Expertises</a></li>
+    <li><a href="#parcours">Parcours</a></li>
+    <li><a href="#temoignages">Témoignages</a></li>
+  </ul>
+  <a href="#contact" class="nav-contact">Contact</a>
+  <button class="nav-burger" id="navBurger" aria-label="Menu">
+    <span></span><span></span>
+  </button>
+</nav>
+
+<div id="mobileMenu">
+  <a href="#apropos" class="mm-link">Profil</a>
+  <a href="#expertises" class="mm-link">Expertises</a>
+  <a href="#parcours" class="mm-link">Parcours</a>
+  <a href="#temoignages" class="mm-link">Témoignages</a>
+  <a href="#contact" class="mm-link mm-contact">Contact</a>
+</div>
+
+<div id="scroll-container">
+<div id="scroll-content">
+
+{# ═══ HERO ═══ #}
+<section id="hero">
+  <div class="hero-bg-text" aria-hidden="true">DRH</div>
+  <div class="hero-label" id="heroLabel">DRH opérationnel · Management de transition</div>
+  <h1 class="hero-name" id="heroName">
+    <span class="word"><span class="word-inner">Gilles</span></span>
+    <span class="word"><span class="word-inner">Dimbert</span></span>
+  </h1>
+  <div class="hero-bottom">
+    <p class="hero-tagline" id="heroTagline">
+      Quand les décisions sont <em>sensibles</em>,<br>j'accompagne les dirigeants.
+    </p>
+    <div class="hero-right" id="heroRight">
+      <p>{{ contact.location }}</p>
+      <p>Disponible {{ contact.availability }}</p>
+      <p><a href="tel:{{ contact.phone|replace({' ': ''}) }}">{{ contact.phone }}</a></p>
+    </div>
+  </div>
+  <div class="hero-scroll-hint" id="heroScroll">
+    <span>Scroll</span>
+    <div class="scroll-dot"></div>
+  </div>
+</section>
+
+{# ═══ MARQUEE ═══ #}
+<section id="marquee" style="min-height:auto">
+  <div class="marquee-track">
+    {% for stat in stats %}
+      <span class="item">{{ stat.target }}{{ stat.suffix }} {{ stat.label|replace({"\n": ' '}) }}</span><span class="item sep">·</span>
+    {% endfor %}
+    <span class="item">Management de transition</span><span class="item sep">·</span>
+    <span class="item">DRH opérationnel</span><span class="item sep">·</span>
+    <span class="item">{{ contact.location }}</span><span class="item sep">·</span>
+    {# Doublon pour l'animation en boucle #}
+    {% for stat in stats %}
+      <span class="item">{{ stat.target }}{{ stat.suffix }} {{ stat.label|replace({"\n": ' '}) }}</span><span class="item sep">·</span>
+    {% endfor %}
+    <span class="item">Management de transition</span><span class="item sep">·</span>
+    <span class="item">DRH opérationnel</span><span class="item sep">·</span>
+    <span class="item">{{ contact.location }}</span><span class="item sep">·</span>
+  </div>
+</section>
+
+{# ═══ PITCH ═══ #}
+<section id="pitch">
+  <div class="pitch-headline" id="pitchHeadline"></div>
+</section>
+
+{# ═══ PITCH CARDS ═══ #}
+<section id="pitch-cards" style="min-height:auto">
+  <div class="section-label">Profil</div>
+  <h2 class="section-title" style="margin-bottom:4rem">{{ pitchDomains|length }} domaines d'intervention</h2>
+  <div class="pitch-grid">
+    {% for domain in pitchDomains %}
+    <div class="pitch-item">
+      <p class="pitch-item-num">{{ '%02d'|format(loop.index) }}</p>
+      <h3 class="pitch-item-title">{{ domain.title }}</h3>
+      <p class="pitch-item-text">{{ domain.text }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{# ═══ À PROPOS ═══ #}
+<section id="apropos" style="min-height:auto">
+  <div class="section-label">À propos</div>
+  <h2 class="section-title">DRH à la frontière du terrain et de la stratégie</h2>
+  <div class="apropos-grid">
+    <div class="apropos-photo">
+      <img src="img/gilles-dimbert.jpg" alt="Gilles Dimbert — DRH opérationnel">
+      <div class="apropos-photo-meta">
+        <strong>Formation</strong>
+        <p>Bac+5 — ISG Paris<br>Mastère en Ressources Humaines</p>
+        <p style="margin-top:1rem">Disponible <span style="color:var(--red)">{{ contact.availability }}</span><br>{{ contact.location }}<br>{{ contact.extraInfo }}</p>
+      </div>
+    </div>
+    <div class="apropos-content">
+      <p>DRH opérationnel intervenant en management de transition ou en CDI, j'accompagne les dirigeants confrontés à des décisions sociales sensibles et à des contextes organisationnels complexes.</p>
+      <p>Restructuration, crise sociale, transformation, croissance exigeante, carve-out ou vacance de poste RH : <strong>j'aide les entreprises à reprendre rapidement le contrôle des enjeux humains</strong>, préserver la continuité d'activité, puis structurer durablement leur fonction RH au service de la stratégie.</p>
+      <p>Fort de plus de <strong>30 ans d'expérience en groupes internationaux et ETI familiales</strong>, j'ai accompagné des organisations de 130 à plus de 3 000 collaborateurs, <strong>piloté plus de 2 800 départs</strong> (avec et sans PSE), des fermetures de sites, des procédures collectives, ainsi que des phases de forte croissance et d'intégration de +750 collaborateurs.</p>
+      <p>Ma spécificité est d'intervenir là où les équilibres sont fragiles, avec une <strong>crédibilité reconnue à la fois par les directions générales, les partenaires sociaux et les institutions</strong>. Mon style est pragmatique, orienté décision et responsabilité managériale.</p>
+      <div class="apropos-when">
+        <h3>Quand faire appel à moi ?</h3>
+        <ul>
+          <li>Une restructuration ou un plan social à conduire</li>
+          <li>Une situation sociale dégradée ou sensible</li>
+          <li>Une phase de transformation organisationnelle</li>
+          <li>Une forte croissance ou intégration post-acquisition</li>
+          <li>Un départ de DRH ou vacance nécessitant une intervention immédiate</li>
+          <li>Un besoin de sécurisation RH auprès du COMEX / CODIR</li>
+          <li>Une réorganisation de la fonction RH et digitalisation</li>
+          <li>Une capacité d'action en forte autonomie ou aux côtés d'un DG décisionnaire</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ═══ STATS ═══ #}
+<section id="stats" style="min-height:auto">
+  {% for stat in stats %}
+  <div class="stat-block">
+    <span class="stat-num" data-target="{{ stat.target }}">0{% if stat.suffix %}<sup>{{ stat.suffix }}</sup>{% endif %}</span>
+    <p class="stat-label">{{ stat.label|replace({"\n": '<br>'})|raw }}</p>
+  </div>
+  {% endfor %}
+</section>
+
+{# ═══ EXPERTISES ═══ #}
+<section id="expertises">
+  <div class="exp-pin" id="expPin">
+    <div class="exp-left">
+      <div class="exp-left-progress" id="expProgBar"></div>
+      <div class="section-label">Expertises</div>
+      <div class="exp-left-idx" id="expIdx">01 / {{ '%02d'|format(expertises|length) }}</div>
+      <div class="exp-left-bignum" id="expBigNum">01</div>
+      <h3 class="exp-left-title" id="expBigTitle">{{ expertises|first.title }}</h3>
+    </div>
+    <div class="exp-right">
+      <div class="exp-right-inner" id="expRightInner">
+        {% for expertise in expertises %}
+        <div class="exp-pin-card" id="epc{{ loop.index0 }}">
+          <span class="epc-num">{{ '%02d'|format(loop.index) }}</span>
+          <h4 class="epc-title">{{ expertise.title }}</h4>
+          <p class="epc-desc">{{ expertise.description }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ═══ RÉALISATIONS ═══ #}
+<section id="realisations" style="min-height:auto">
+  <div class="section-label">Réalisations</div>
+  <h2 class="section-title">Missions & Impacts</h2>
+  <div class="real-tabs">
+    {% for real in realisations %}
+    <button class="real-tab{{ loop.first ? ' active' : '' }}" onclick="switchReal({{ loop.index0 }})">{{ real.tabLabel }}</button>
+    {% endfor %}
+  </div>
+  {% for real in realisations %}
+  <div class="real-panel{{ loop.first ? ' active' : '' }}" id="real-{{ loop.index0 }}">
+    <div class="real-col">
+      <h4>Contextes gérés</h4>
+      <ul>
+        {% for item in real.contextItems %}<li>{{ item }}</li>{% endfor %}
+      </ul>
+    </div>
+    <div class="real-col">
+      <span class="real-big">{{ real.bigNumber }}{% if real.bigNumberSuffix %}<sup>{{ real.bigNumberSuffix }}</sup>{% endif %}</span>
+      <span class="real-unit">{{ real.bigNumberLabel }}</span>
+      <ul>
+        {% for item in real.resultItems %}<li>{{ item }}</li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+{# ═══ MÉTHODE ═══ #}
+<section id="methode" style="min-height:auto">
+  <div class="method-pin-wrap" id="methodPin">
+    <div class="section-label">Méthode</div>
+    <h2 class="section-title">{{ methodeSteps|length }} temps. 90 jours.</h2>
+    <div class="method-steps">
+      {% for step in methodeSteps %}
+      <div class="method-step">
+        <div class="method-step-num">{{ '%02d'|format(loop.index) }}</div>
+        <div class="method-step-day">{{ step.day }}</div>
+        <span class="method-step-tag">{{ step.tag }}</span>
+        <p class="method-step-desc">{{ step.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ═══ PARCOURS ═══ #}
+<section id="parcours" style="min-height:auto">
+  <div class="section-label">Parcours</div>
+  <h2 class="section-title">30 ans. {{ experiences|length }} entreprises.</h2>
+  <div class="tl2" id="tl2">
+    <div class="tl2-progress-track"><div class="tl2-progress-fill" id="tl2Fill"></div></div>
+
+    {% for exp in experiences %}
+    <div class="tl2-item">
+      <div class="tl2-bignum">{{ '%02d'|format(loop.index) }}</div>
+
+      {# ── EN-TÊTE : méta + identité ── #}
+      <div class="tl2-head">
+        <div class="tl2-line tl2-meta">
+          <span>{{ exp.period }}</span>
+          <span class="tl2-type-tag">{{ exp.type|upper }}</span>
+        </div>
+        {% if exp.logo %}
+        <img src="logos/{{ exp.logo }}" alt="{{ exp.company }}" class="tl2-line tl2-logo">
+        {% endif %}
+        <h3 class="tl2-line tl2-company">{{ exp.company }}{% if exp.companySubtitle %}<br><span style="opacity:.55;font-size:.65em">{{ exp.companySubtitle }}</span>{% endif %}</h3>
+        <div class="tl2-line tl2-role">{{ exp.role }}</div>
+        <p class="tl2-line tl2-context">{{ exp.context }}</p>
+      </div>
+
+      {# ── DÉTAILS : groupes + items ── #}
+      {% if exp.detailGroups %}
+      <div class="tl2-body">
+        {% for group in exp.detailGroups %}
+        <div class="tl2-detail-group">
+          <span class="tl2-line tl2-detail-label">{{ group.label }}</span>
+          <ul class="tl2-detail-list">
+            {% for item in group.items %}<li class="tl2-line">{{ item }}</li>{% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      {# ── FOOTER : tags + liens ── #}
+      {% if exp.tags or exp.externalLinks %}
+      <div class="tl2-line tl2-footer">
+        {% for tag in exp.tags %}
+        <span class="tl2-tag{% if loop.first %} r{% endif %}">{{ tag }}</span>
+        {% endfor %}
+        {% for link in exp.externalLinks %}
+        <a href="{{ link.url }}" target="_blank" class="tl2-ref">{{ link.label }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+
+  </div>
+</section>
+
+{# ═══ TÉMOIGNAGES ═══ #}
+<section id="temoignages" style="min-height:auto">
+  <div class="section-label">Témoignages</div>
+  <h2 class="section-title">Ils témoignent</h2>
+  <div class="testi-tabs">
+    <button class="testi-tab active" onclick="switchTesti(0)">Directions &amp; COMEX</button>
+    <button class="testi-tab" onclick="switchTesti(1)">Dialogue social &amp; Institutions</button>
+    <button class="testi-tab" onclick="switchTesti(2)">Experts &amp; Équipes</button>
+  </div>
+
+  <div class="testi-panel active" id="testi-0">
+    <div class="testi-grid">
+      {% for t in temoignages.directions %}
+      <div class="testi-card">
+        <div class="testi-author">
+          <strong>{{ t.authorName }}</strong>
+          <span>{{ t.authorRole }}</span>
+        </div>
+        <p class="testi-quote">« {{ t.quote }} »</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="testi-panel" id="testi-1">
+    <div class="testi-grid">
+      {% for t in temoignages.dialogue_social %}
+      <div class="testi-card">
+        <div class="testi-author">
+          <strong>{{ t.authorName }}</strong>
+          <span>{{ t.authorRole }}</span>
+        </div>
+        <p class="testi-quote">« {{ t.quote }} »</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="testi-panel" id="testi-2">
+    <div class="testi-grid">
+      {% for t in temoignages.experts %}
+      <div class="testi-card">
+        <div class="testi-author">
+          <strong>{{ t.authorName }}</strong>
+          <span>{{ t.authorRole }}</span>
+        </div>
+        <p class="testi-quote">« {{ t.quote }} »</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ═══ SOURCES ═══ #}
+<section id="sources" style="min-height:auto">
+  <div class="section-label">Références</div>
+  <h2 class="section-title">Sources publiques</h2>
+  <p class="sources-intro">Certains contextes d'intervention évoqués sont documentés par des sources publiques, institutionnelles ou professionnelles indépendantes.</p>
+  <ul class="sources-list">
+    {% for source in sources %}
+    <li>
+      <a href="{{ source.url }}" target="_blank">
+        <span class="src-badge">{{ source.badge }}</span>
+        <span class="src-title">{{ source.title }}</span>
+        <span class="src-arrow">↗</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+{# ═══ CONTACT ═══ #}
+<section id="contact">
+  <h2 class="contact-big">Vous faites face à une <em>situation sensible</em>&nbsp;?</h2>
+  <div class="contact-grid">
+    <a href="tel:{{ contact.phone|replace({' ': ''}) }}" class="contact-item">
+      <span class="ico">✆</span>{{ contact.phone }}
+    </a>
+    <a href="mailto:{{ contact.email }}" class="contact-item">
+      <span class="ico">@</span>{{ contact.email }}
+    </a>
+    <a href="{{ contact.linkedin }}" target="_blank" class="contact-item">
+      <span class="ico">in</span>LinkedIn
+    </a>
+  </div>
+  <p class="contact-avail">Disponible <span>{{ contact.availability }}</span> · {{ contact.location }} · {{ contact.extraInfo }}</p>
+</section>
+
+{# ═══ FOOTER ═══ #}
+<footer>
+  <p>© {{ "now"|date("Y") }} Gilles Dimbert · DRH opérationnel</p>
+  <div class="footer-links">
+    <a href="tel:{{ contact.phone|replace({' ': ''}) }}">{{ contact.phone }}</a>
+    <a href="mailto:{{ contact.email }}">Email</a>
+    <a href="{{ contact.linkedin }}" target="_blank">LinkedIn</a>
+  </div>
+</footer>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/animations.js?v=7"></script>
+<script src="js/ui.js?v=3"></script>
+
+</body>
+</html>

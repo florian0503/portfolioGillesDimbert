@@ -1,0 +1,127 @@
+/* ═══════════════════════════════════════
+   BASE — variables, reset, global
+═══════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --bg:#F7F4EF;
+  --bg2:#EFECE7;
+  --bg3:#E8E4DE;
+  --text:#0D0D0D;
+  --text-mid:#6B6560;
+  --text-dim:#B0AA9F;
+  --red:#E63946;
+  --red-dim:rgba(230,57,70,0.10);
+  --border:rgba(13,13,13,0.08);
+  --syne:'Plus Jakarta Sans',sans-serif;
+  --inter:'Inter',sans-serif;
+}
+
+/* ─── THEME SOMBRE ─── */
+body.dark-theme{
+  --bg:#0A0A0A;
+  --bg2:#111111;
+  --bg3:#181818;
+  --text:#F0EDE6;
+  --text-mid:#888580;
+  --text-dim:#444;
+  --border:rgba(240,237,230,0.07);
+}
+
+html{overflow:hidden}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--inter);
+  font-weight:300;
+  overflow:hidden;
+  cursor:none;
+  height:100vh;
+}
+
+/* ─── SMOOTH SCROLL WRAPPER ─── */
+#scroll-container{position:fixed;inset:0;overflow:hidden}
+#scroll-content{will-change:transform}
+
+/* ─── SECTIONS BASE ─── */
+section{min-height:100vh;position:relative}
+
+/* ─── CURSOR ─── */
+#cur{
+  position:fixed;top:0;left:0;z-index:9999;
+  width:10px;height:10px;
+  background:var(--red);
+  border-radius:50%;
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+  transition:width .25s,height .25s,border-radius .25s;
+  mix-blend-mode:difference;
+}
+#cur-ring{
+  position:fixed;top:0;left:0;z-index:9998;
+  width:40px;height:40px;
+  border:1px solid rgba(230,57,70,0.4);
+  border-radius:50%;
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+}
+body.hovering #cur{width:50px;height:50px;border-radius:50%;background:var(--red);opacity:.15}
+
+/* ─── LOADER ─── */
+#loader{
+  position:fixed;inset:0;z-index:10000;
+  background:var(--bg);
+  display:flex;align-items:center;justify-content:center;
+  transition:background .3s;
+}
+.loader-text{
+  font-family:var(--syne);
+  font-size:clamp(4rem,12vw,10rem);
+  font-weight:800;
+  letter-spacing:-.03em;
+  color:var(--text);
+  overflow:hidden;
+}
+.loader-text span{display:inline-block;transform:translateY(110%)}
+.loader-bar{position:absolute;bottom:0;left:0;height:2px;width:0%;background:var(--red)}
+
+/* ─── GRAIN OVERLAY ─── */
+#grain{
+  position:fixed;inset:0;z-index:9990;
+  pointer-events:none;opacity:.045;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grainAnim .5s steps(2) infinite;
+}
+@keyframes grainAnim{
+  0%{transform:translate(0,0)}
+  25%{transform:translate(-2%,-1%)}
+  50%{transform:translate(1%,2%)}
+  75%{transform:translate(-1%,1%)}
+  100%{transform:translate(2%,-2%)}
+}
+
+/* ─── TEXT REVEAL — lignes qui montent ─── */
+.split-title .line-wrap{display:block;overflow:hidden;line-height:1.15;padding-bottom:.18em;margin-bottom:-.18em}
+.split-title .line-inner{display:block;transform:translateY(105%)}
+
+/* ─── CLIP REVEAL ─── */
+.clip-reveal{clip-path:inset(100% 0 0 0)}
+
+/* ─── SECTION LABEL / TITLE ─── */
+.section-label{
+  font-size:.62rem;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:var(--red);
+  margin-bottom:.8rem;
+  display:flex;align-items:center;gap:1rem;
+}
+.section-label::before{content:'';display:block;width:24px;height:1px;background:var(--red)}
+.section-title{
+  font-family:var(--syne);
+  font-size:clamp(2.5rem,5vw,5rem);
+  font-weight:800;
+  letter-spacing:-.03em;
+  line-height:1.2;
+  padding-bottom:.05em;
+}

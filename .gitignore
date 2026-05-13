@@ -1,0 +1,19 @@
+# Claude Code (fichiers internes)
+.claude/
+
+# Symfony — cache & logs (régénérés automatiquement)
+admin/var/cache/
+admin/var/log/
+admin/.env.local
+admin/.env.*.local
+
+# Dépendances PHP (composer install les recrée)
+admin/vendor/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Playwright screenshots
+.playwright-mcp/
+admin/.playwright-mcp/

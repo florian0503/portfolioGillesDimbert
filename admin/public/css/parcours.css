@@ -1,0 +1,123 @@
+/* ═══════════════════════════════════════
+   PARCOURS — timeline full-width, ligne par ligne
+═══════════════════════════════════════ */
+#parcours{padding:5rem 4vw;border-top:1px solid var(--border)}
+
+/* ─── CONTAINER ─── */
+.tl2{margin-top:3rem;position:relative}
+
+/* ─── BARRE PROGRESSION GAUCHE ─── */
+.tl2-progress-track{
+  position:absolute;left:0;top:0;bottom:0;
+  width:2px;background:var(--border);z-index:2;
+}
+.tl2-progress-fill{
+  position:absolute;top:0;left:0;right:0;
+  height:0%;background:var(--red);
+  box-shadow:0 0 6px rgba(230,57,70,.5);
+  transition:height .05s linear;
+}
+
+/* ─── ITEM ─── */
+.tl2-item{
+  position:relative;overflow:hidden;
+  padding:5rem 0 5rem 3rem;
+  border-bottom:1px solid var(--border);
+}
+.tl2-item:first-child{border-top:1px solid var(--border)}
+
+/* ─── NUMÉRO FOND ─── */
+.tl2-bignum{
+  position:absolute;right:0;bottom:-2rem;
+  font-family:var(--syne);font-size:clamp(8rem,18vw,18rem);
+  font-weight:800;color:var(--text);opacity:.03;
+  line-height:1;user-select:none;pointer-events:none;
+  will-change:transform;z-index:0;
+}
+
+/* ─── EN-TÊTE ─── */
+.tl2-head{
+  position:relative;z-index:1;
+  max-width:700px;
+  margin-bottom:3rem;
+}
+
+/* ─── MÉTA (période + type) ─── */
+.tl2-meta{
+  font-size:.63rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--text-dim);margin-bottom:1.2rem;
+  display:flex;align-items:center;gap:.8rem;
+}
+.tl2-type-tag{
+  color:var(--red);border:1px solid rgba(230,57,70,.35);
+  padding:.15rem .55rem;font-size:.58rem;letter-spacing:.15em;
+}
+
+/* ─── LOGO ─── */
+.tl2-logo{
+  height:auto;max-height:32px;max-width:140px;width:auto;
+  opacity:.55;filter:grayscale(100%);
+  margin-bottom:1.2rem;display:block;
+}
+.tl2-logo[alt="Place du Marché"]{max-height:40px;max-width:40px}
+.tl2-logo[alt="Thomson · Thalès"]{
+  height:28px;width:150px;max-width:none;max-height:none;
+  object-fit:cover;object-position:center;
+}
+
+/* ─── COMPANY + RÔLE + CONTEXTE ─── */
+.tl2-company{
+  font-family:var(--syne);font-size:clamp(2.4rem,5vw,5.5rem);
+  font-weight:800;letter-spacing:-.03em;line-height:1.05;
+  color:var(--text);margin-bottom:.6rem;
+}
+.tl2-role{font-size:.75rem;letter-spacing:.06em;color:var(--red);margin-bottom:.7rem}
+.tl2-context{font-size:.82rem;line-height:1.75;color:var(--text-mid)}
+
+/* ─── CORPS — grille de groupes ─── */
+.tl2-body{
+  position:relative;z-index:1;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:2rem 4rem;
+  padding-top:2.5rem;
+  border-top:1px solid var(--border);
+  margin-bottom:2rem;
+}
+.tl2-detail-label{
+  font-size:.57rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--red);margin-bottom:.75rem;display:block;
+}
+.tl2-detail-list{list-style:none;padding:0;margin:0}
+.tl2-detail-list li{
+  font-size:.8rem;line-height:1.8;color:var(--text-mid);
+  padding-left:1.4rem;position:relative;margin-bottom:.1rem;
+}
+.tl2-detail-list li::before{
+  content:'→';position:absolute;left:0;
+  color:var(--red);font-size:.7rem;top:.05em;
+}
+
+/* ─── FOOTER TAGS + REFS ─── */
+.tl2-footer{
+  position:relative;z-index:1;
+  display:flex;align-items:center;flex-wrap:wrap;gap:.5rem;
+}
+.tl2-tag{
+  font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;
+  border:1px solid var(--border);color:var(--text-mid);padding:.22rem .75rem;
+}
+.tl2-tag.r{border-color:rgba(230,57,70,.3);color:var(--red)}
+.tl2-ref{
+  font-size:.56rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--text-dim);border:1px solid var(--border);
+  padding:.22rem .75rem;text-decoration:none;transition:border-color .3s,color .3s;
+}
+.tl2-ref:hover{border-color:var(--red);color:var(--red)}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:900px){
+  .tl2-item{padding:3.5rem 0 3.5rem 1.5rem}
+  .tl2-body{grid-template-columns:1fr}
+  .tl2-bignum{display:none}
+}

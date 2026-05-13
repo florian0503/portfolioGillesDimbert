@@ -1,0 +1,47 @@
+{% extends '@EasyAdmin/page/content.html.twig' %}
+
+{% block page_title %}Tableau de bord{% endblock %}
+
+{% block main %}
+<div style="padding:2rem">
+    <h1 style="font-size:1.5rem;margin-bottom:.5rem">Bonjour 👋</h1>
+    <p style="color:#666;margin-bottom:2rem">Administration du portfolio de Gilles Dimbert.</p>
+
+    <p style="font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:#aaa;margin-bottom:1rem">Contenu du site</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-bottom:2rem">
+        <div style="background:#fff;border:1px solid #e5e7eb;padding:1.25rem;border-radius:8px">
+            <p style="font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:#888;margin-bottom:.4rem">Témoignages</p>
+            <p style="font-size:1.8rem;font-weight:700">{{ nbTemoignages }}</p>
+        </div>
+        <div style="background:#fff;border:1px solid #e5e7eb;padding:1.25rem;border-radius:8px">
+            <p style="font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:#888;margin-bottom:.4rem">Expériences</p>
+            <p style="font-size:1.8rem;font-weight:700">{{ nbExperiences }}</p>
+        </div>
+        <div style="background:#fff;border:1px solid #e5e7eb;padding:1.25rem;border-radius:8px">
+            <p style="font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:#888;margin-bottom:.4rem">Expertises</p>
+            <p style="font-size:1.8rem;font-weight:700">{{ nbExpertises }}</p>
+        </div>
+        <div style="background:#fff;border:1px solid #e5e7eb;padding:1.25rem;border-radius:8px">
+            <p style="font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:#888;margin-bottom:.4rem">Réalisations</p>
+            <p style="font-size:1.8rem;font-weight:700">{{ nbRealisations }}</p>
+        </div>
+        <div style="background:#fff;border:1px solid #e5e7eb;padding:1.25rem;border-radius:8px">
+            <p style="font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:#888;margin-bottom:.4rem">Domaines</p>
+            <p style="font-size:1.8rem;font-weight:700">{{ nbPitchDomains }}</p>
+        </div>
+        <div style="background:#fff;border:1px solid #e5e7eb;padding:1.25rem;border-radius:8px">
+            <p style="font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:#888;margin-bottom:.4rem">Stats clés</p>
+            <p style="font-size:1.8rem;font-weight:700">{{ nbStats }}</p>
+        </div>
+        <div style="background:#fff;border:1px solid #e5e7eb;padding:1.25rem;border-radius:8px">
+            <p style="font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:#888;margin-bottom:.4rem">Sources</p>
+            <p style="font-size:1.8rem;font-weight:700">{{ nbSources }}</p>
+        </div>
+    </div>
+
+    <p style="font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:#aaa;margin-bottom:1rem">Raccourcis</p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap">
+        <a href="/" target="_blank" style="display:inline-block;padding:.6rem 1.2rem;background:#e63946;color:#fff;border-radius:6px;font-size:.85rem;font-weight:600;text-decoration:none">Voir le site →</a>
+    </div>
+</div>
+{% endblock %}
