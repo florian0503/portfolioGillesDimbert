@@ -16,17 +16,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/base.css?v=4">
-<link rel="stylesheet" href="css/nav.css?v=4">
-<link rel="stylesheet" href="css/hero.css?v=4">
-<link rel="stylesheet" href="css/sections.css?v=5">
-<link rel="stylesheet" href="css/parcours.css?v=4">
-<link rel="stylesheet" href="css/responsive.css?v=4">
+<link rel="stylesheet" href="css/base.css?v=21">
+<link rel="stylesheet" href="css/nav.css?v=5">
+<link rel="stylesheet" href="css/hero.css?v=5">
+<link rel="stylesheet" href="css/sections.css?v=8">
+<link rel="stylesheet" href="css/parcours.css?v=8">
+<link rel="stylesheet" href="css/responsive.css?v=5">
 </head>
 <body>
 
 <!-- GRAIN -->
 <div id="grain"></div>
+
+<!-- SCROLLBAR CUSTOM -->
+<div id="custom-scrollbar"></div>
 
 <!-- SCROLL TO TOP -->
 <button id="scroll-top" onclick="window.innerWidth<=900?window.scrollTo({top:0,behavior:'smooth'}):lenis.scrollTo(0,{duration:1.4})" title="Haut de page">↑</button>
@@ -43,8 +46,18 @@
 
 <!-- LOADER -->
 <div id="loader">
-  <div class="loader-text">
-    <span id="lG">G</span><span id="lD">D</span>
+  <!-- Phase 1 : photo sur fond noir -->
+  <div class="loader-photo-wrap" id="loaderPhotoWrap">
+    <img src="img/gilles-dimbert.jpg" class="loader-photo" id="loaderPhoto" alt="">
+  </div>
+  <!-- Phase 2 : arcs circulaires -->
+  <div class="loader-arc-left"  id="arcLeft"></div>
+  <div class="loader-arc-right" id="arcRight"></div>
+  <!-- Phase 3 : DRH -->
+  <div class="loader-drh" id="loaderDRH">
+    <div class="loader-drh-clip"><span id="llD">D</span></div>
+    <div class="loader-drh-clip"><span id="llR">R</span></div>
+    <div class="loader-drh-clip"><span id="llH">H</span></div>
   </div>
   <div class="loader-bar" id="loaderBar"></div>
 </div>
@@ -220,21 +233,61 @@
           <span class="epc-num">01</span>
           <h4 class="epc-title">Négociation</h4>
           <p class="epc-desc">Gestion autonome de négociations syndicales dans des contextes parfois hostiles. Présidence de CSE (40 élus). Accords majoritaires en délais contraints.</p>
+          <div class="epc-reviews">
+            <div class="epc-review">
+              <p class="epc-review-quote">« Avec sa solidité professionnelle, Gilles a toujours été respecté par l'ensemble des syndicats et partenaires sociaux. »</p>
+              <div class="epc-review-author"><strong>Egbert Maagd</strong><span>DG Europe de l'Ouest — Wincanton</span></div>
+            </div>
+            <div class="epc-review">
+              <p class="epc-review-quote">« DRH loyal et respectueux de la parole donnée, Gilles sait construire des compromis durables même en situation de conflit. »</p>
+              <div class="epc-review-author"><strong>Jean-Marc Folens</strong><span>DS Central FO — Wincanton</span></div>
+            </div>
+          </div>
         </div>
         <div class="exp-pin-card" id="epc1">
           <span class="epc-num">02</span>
           <h4 class="epc-title">Transformation</h4>
           <p class="epc-desc">Restructurations majeures, PSE, risques psychosociaux, droits d'alerte, autorités de tutelle. Croissance organique, carve-out, intégrations complexes.</p>
+          <div class="epc-reviews">
+            <div class="epc-review">
+              <p class="epc-review-quote">« Gilles a su restaurer la confiance des salariés et des IRP, tout en menant des transformations profondes avec humanité et efficacité. »</p>
+              <div class="epc-review-author"><strong>Brieuc Fruchon</strong><span>Président — Place du Marché</span></div>
+            </div>
+            <div class="epc-review">
+              <p class="epc-review-quote">« Leader engagé, Gilles sait gérer des situations complexes et proposer des transformations pertinentes, avec une vision transverse du business. »</p>
+              <div class="epc-review-author"><strong>Gilles Messier</strong><span>Directeur Général — Groupe Bernard</span></div>
+            </div>
+          </div>
         </div>
         <div class="exp-pin-card" id="epc2">
           <span class="epc-num">03</span>
           <h4 class="epc-title">Pilotage RH</h4>
           <p class="epc-desc">Management d'équipes RH de 2 à 30 personnes. Mise en place de politiques RH complètes. Relations sociales et protection collective.</p>
+          <div class="epc-reviews">
+            <div class="epc-review">
+              <p class="epc-review-quote">« Gilles combine vision stratégique, leadership managérial et expertise RH pour fédérer les équipes autour des enjeux les plus exigeants. »</p>
+              <div class="epc-review-author"><strong>Eric Sarrazin</strong><span>Directeur Régional — Place du Marché</span></div>
+            </div>
+            <div class="epc-review">
+              <p class="epc-review-quote">« Manager pragmatique et fédérateur, Gilles sait accompagner, rassurer et faire grandir les équipes. »</p>
+              <div class="epc-review-author"><strong>Manuel Fernandes</strong><span>Dir. Région Centre Renault Trucks — Groupe Bernard</span></div>
+            </div>
+          </div>
         </div>
         <div class="exp-pin-card" id="epc3">
           <span class="epc-num">04</span>
           <h4 class="epc-title">Modernisation</h4>
           <p class="epc-desc">Implémentation SIRH, logiciels de paie, data RH, digitalisation des processus, marque employeur et transformation culturelle.</p>
+          <div class="epc-reviews">
+            <div class="epc-review">
+              <p class="epc-review-quote">« Les modules SIRH développés couvrent l'ensemble du spectre RH sur un périmètre de plus de 10 000 collaborateurs. »</p>
+              <div class="epc-review-author"><strong>Emmanuel Lemoine</strong><span>DRH — Emil Frey France</span></div>
+            </div>
+            <div class="epc-review">
+              <p class="epc-review-quote">« Grâce à son approche pragmatique et sa compréhension des nouvelles technologies, Gilles met en place des solutions concrètes au service de la performance. »</p>
+              <div class="epc-review-author"><strong>Olivier Carré-Pierrat</strong><span>DSI — Place du Marché</span></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -374,12 +427,10 @@
     <div class="tl2-item">
       <div class="tl2-bignum">01</div>
       <div class="tl2-left">
-        <div class="tl2-meta"><span>2025–2026</span><span class="tl2-type-tag">Transition</span></div>
         <h3 class="tl2-company">Groupe confidentiel</h3>
-        <div class="tl2-role">DRH · Management de transition</div>
         <p class="tl2-context">Enseignement privé + immobilier + hôtellerie + résidences étudiantes · 7 campus · 700 salariés · Actionnariat familial</p>
         <div class="tl2-footer">
-          <span class="tl2-tag r">Transition</span><span class="tl2-tag">700 sal.</span><span class="tl2-tag">Multi-activités</span>
+          <span class="tl2-tag">2025–2026</span><span class="tl2-tag r">Transition</span><span class="tl2-tag">700 sal.</span><span class="tl2-tag">Multi-activités</span>
         </div>
       </div>
       <div class="tl2-right">
@@ -408,13 +459,10 @@
     <div class="tl2-item">
       <div class="tl2-bignum">02</div>
       <div class="tl2-left">
-        <div class="tl2-meta"><span>2025</span><span class="tl2-type-tag">Transition</span></div>
-        <img src="logos/intermarche.png" alt="Intermarché" class="tl2-logo">
-        <h3 class="tl2-company">Intermarché<br>Pennes Mirabeau</h3>
-        <div class="tl2-role">DRH · Management de transition</div>
+        <h3 class="tl2-company">Intermarché</h3>
         <p class="tl2-context">130 salariés · Distribution alimentaire BtoC · Contexte syndical Marseille Nord</p>
         <div class="tl2-footer">
-          <span class="tl2-tag r">Transition</span><span class="tl2-tag">130 lic. éco.</span><span class="tl2-tag">PSE</span>
+          <span class="tl2-tag">2025</span><span class="tl2-tag r">Transition</span><span class="tl2-tag">130 lic. éco.</span><span class="tl2-tag">PSE</span>
         </div>
       </div>
       <div class="tl2-right">
@@ -436,13 +484,10 @@
     <div class="tl2-item">
       <div class="tl2-bignum">03</div>
       <div class="tl2-left">
-        <div class="tl2-meta"><span>2020–2025</span><span class="tl2-type-tag">CDI</span></div>
-        <img src="logos/place-du-marche.png" alt="Place du Marché" class="tl2-logo">
         <h3 class="tl2-company">Place du Marché<br><span style="opacity:.55;font-size:.65em">Toupargel</span></h3>
-        <div class="tl2-role">DRH puis Mandataire social · CDI</div>
         <p class="tl2-context">2 200 collab. · 150 sites · 190 M€ CA · Distribution alimentaire BtoC · Management équipe RH 25 pers.</p>
         <div class="tl2-footer">
-          <span class="tl2-tag r">CDI</span><span class="tl2-tag">2 200 sal.</span><span class="tl2-tag">Mandataire social</span>
+          <span class="tl2-tag">2020–2025</span><span class="tl2-tag r">CDI</span><span class="tl2-tag">2 200 sal.</span><span class="tl2-tag">Mandataire social</span>
         </div>
       </div>
       <div class="tl2-right">
@@ -471,12 +516,10 @@
     <div class="tl2-item">
       <div class="tl2-bignum">04</div>
       <div class="tl2-left">
-        <div class="tl2-meta"><span>2012–2020</span><span class="tl2-type-tag">CDI</span></div>
         <h3 class="tl2-company">Groupe Bernard</h3>
-        <div class="tl2-role">DRH · CDI</div>
         <p class="tl2-context">3 000 collab. · 100 sites · 1,2 Md€ CA · Distribution automobile · Management équipe RH 30 pers. + opé. 150 pers.</p>
         <div class="tl2-footer">
-          <span class="tl2-tag r">CDI</span><span class="tl2-tag">3 000 sal.</span><span class="tl2-tag">DGO</span>
+          <span class="tl2-tag">2012–2020</span><span class="tl2-tag r">CDI</span><span class="tl2-tag">3 000 sal.</span><span class="tl2-tag">DGO</span>
           <a href="https://www.largus.fr/pros/actualite-automobile/gilles-messier-prend-la-direction-generale-du-groupe-bernard-5763384.html" target="_blank" class="tl2-ref">L'Argus</a>
         </div>
       </div>
@@ -511,13 +554,10 @@
     <div class="tl2-item">
       <div class="tl2-bignum">05</div>
       <div class="tl2-left">
-        <div class="tl2-meta"><span>2000–2011</span><span class="tl2-type-tag">CDI</span></div>
-        <img src="logos/wincanton.png" alt="Wincanton" class="tl2-logo">
         <h3 class="tl2-company">Wincanton</h3>
-        <div class="tl2-role">DRH · CDI</div>
         <p class="tl2-context">2 500 collab. · 30 sites · 200 M€ CA · Logistique & Transport BtoB · Groupe anglais 32 000 sal.</p>
         <div class="tl2-footer">
-          <span class="tl2-tag r">CDI</span><span class="tl2-tag">2 500 sal.</span><span class="tl2-tag">Groupe anglais</span>
+          <span class="tl2-tag">2000–2011</span><span class="tl2-tag r">CDI</span><span class="tl2-tag">2 500 sal.</span><span class="tl2-tag">Groupe anglais</span>
           <a href="https://supplychainmagazine.fr/nl/2012/trois-nouvelles-tetes-chez-tlf/" target="_blank" class="tl2-ref">Supply Chain Mag</a>
           <a href="https://www.unsa.org/IMG/pdf/jo9122022nominations_conseillers_prud_hommes.pdf" target="_blank" class="tl2-ref">JO — Prud'hommes</a>
         </div>
@@ -559,13 +599,10 @@
     <div class="tl2-item">
       <div class="tl2-bignum">06</div>
       <div class="tl2-left">
-        <div class="tl2-meta"><span>1995–2000</span><span class="tl2-type-tag">CDI</span></div>
-        <img src="logos/alstom.png" alt="Alstom Power" class="tl2-logo">
         <h3 class="tl2-company">Alstom Power</h3>
-        <div class="tl2-role">DRH · Responsable formation · CDI</div>
         <p class="tl2-context">1 200 collab. · Fabrication de turbines · Industrie lourde · Management équipe RH 15 pers.</p>
         <div class="tl2-footer">
-          <span class="tl2-tag r">CDI</span><span class="tl2-tag">1 200 sal.</span><span class="tl2-tag">Industrie</span>
+          <span class="tl2-tag">1995–2000</span><span class="tl2-tag r">CDI</span><span class="tl2-tag">1 200 sal.</span><span class="tl2-tag">Industrie</span>
         </div>
       </div>
       <div class="tl2-right">
@@ -592,13 +629,10 @@
     <div class="tl2-item">
       <div class="tl2-bignum">07</div>
       <div class="tl2-left">
-        <div class="tl2-meta"><span>1993–1995</span><span class="tl2-type-tag">CDD</span></div>
-        <img src="logos/thales.png" alt="Thomson · Thalès" class="tl2-logo">
         <h3 class="tl2-company">Thomson · Thalès</h3>
-        <div class="tl2-role">Contrôleur financier · CDD</div>
         <p class="tl2-context">1 000 collab. · Industrie défense · Groupe matriciel international</p>
         <div class="tl2-footer">
-          <span class="tl2-tag">CDD</span><span class="tl2-tag">Défense</span>
+          <span class="tl2-tag">1993–1995</span><span class="tl2-tag">CDD</span><span class="tl2-tag">Défense</span>
         </div>
       </div>
       <div class="tl2-right">

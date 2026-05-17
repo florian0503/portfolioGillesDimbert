@@ -148,6 +148,13 @@
   color:var(--text);margin-bottom:.5rem;
 }
 .epc-desc{font-size:.8rem;line-height:1.75;color:var(--text-mid)}
+.epc-reviews{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.8rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+.epc-review{background:var(--bg2);padding:1.2rem 1.4rem;display:flex;flex-direction:column;gap:.8rem;border-left:2px solid transparent;transition:border-color .3s}
+.epc-review:hover{border-left-color:var(--red)}
+.epc-review-quote{font-size:.75rem;line-height:1.75;color:var(--text-mid)}
+.epc-review-author{display:flex;flex-direction:column;gap:.15rem;padding-top:.7rem;border-top:1px solid var(--border)}
+.epc-review-author strong{font-family:var(--syne);font-size:.72rem;font-weight:700;color:var(--text)}
+.epc-review-author span{font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
 .exp-track{display:flex;gap:1px;padding:0 4vw}
 .exp-card{
   flex:0 0 calc(25vw - 1rem);min-width:320px;

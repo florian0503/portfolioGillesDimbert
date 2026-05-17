@@ -14,7 +14,7 @@
 .tl2-progress-fill{
   position:absolute;top:0;left:0;right:0;
   height:0%;background:var(--red);
-  box-shadow:0 0 6px rgba(230,57,70,.5);
+  box-shadow:0 0 6px rgba(4,82,253,.5);
   transition:height .05s linear;
 }
 
@@ -36,32 +36,30 @@
 }
 
 /* ─── EN-TÊTE ─── */
-.tl2-head{
-  position:relative;z-index:1;
-  max-width:700px;
-  margin-bottom:3rem;
-}
+.tl2-head{position:relative;z-index:1;max-width:700px;margin-bottom:3rem}
 
-/* ─── MÉTA (période + type) ─── */
-.tl2-meta{
-  font-size:.63rem;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--text-dim);margin-bottom:1.2rem;
-  display:flex;align-items:center;gap:.8rem;
+/* ─── LEFT — colonne infos pleine largeur ─── */
+.tl2-left{
+  position:relative;z-index:1;
+  display:flex;flex-direction:column;
+  margin-bottom:2.5rem;
 }
-.tl2-type-tag{
-  color:var(--red);border:1px solid rgba(230,57,70,.35);
-  padding:.15rem .55rem;font-size:.58rem;letter-spacing:.15em;
-}
+.tl2-logo{order:1}
+.tl2-company{order:2}
+.tl2-context{order:3;margin-bottom:1.2rem}
+.tl2-footer{order:4}
+.tl2-meta{display:none}
+.tl2-role{display:none}
 
 /* ─── LOGO ─── */
 .tl2-logo{
-  height:auto;max-height:32px;max-width:140px;width:auto;
-  opacity:.55;filter:grayscale(100%);
-  margin-bottom:1.2rem;display:block;
+  height:auto;max-height:56px;max-width:200px;width:auto;
+  opacity:1;filter:none;
+  margin-bottom:1.8rem;display:block;
 }
-.tl2-logo[alt="Place du Marché"]{max-height:40px;max-width:40px}
+.tl2-logo[alt="Place du Marché"]{max-height:56px;max-width:56px}
 .tl2-logo[alt="Thomson · Thalès"]{
-  height:28px;width:150px;max-width:none;max-height:none;
+  height:40px;width:180px;max-width:none;max-height:none;
   object-fit:cover;object-position:center;
 }
 
@@ -74,15 +72,14 @@
 .tl2-role{font-size:.75rem;letter-spacing:.06em;color:var(--red);margin-bottom:.7rem}
 .tl2-context{font-size:.82rem;line-height:1.75;color:var(--text-mid)}
 
-/* ─── CORPS — grille de groupes ─── */
-.tl2-body{
+/* ─── CORPS — grille de groupes (pleine largeur) ─── */
+.tl2-body,.tl2-right{
   position:relative;z-index:1;
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
-  gap:2rem 4rem;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:2.5rem 5rem;
   padding-top:2.5rem;
   border-top:1px solid var(--border);
-  margin-bottom:2rem;
 }
 .tl2-detail-label{
   font-size:.57rem;letter-spacing:.22em;text-transform:uppercase;
@@ -107,7 +104,7 @@
   font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;
   border:1px solid var(--border);color:var(--text-mid);padding:.22rem .75rem;
 }
-.tl2-tag.r{border-color:rgba(230,57,70,.3);color:var(--red)}
+.tl2-tag.r{border-color:rgba(4,82,253,.3);color:var(--red)}
 .tl2-ref{
   font-size:.56rem;letter-spacing:.08em;text-transform:uppercase;
   color:var(--text-dim);border:1px solid var(--border);

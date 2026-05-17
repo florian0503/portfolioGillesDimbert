@@ -10,8 +10,8 @@
   --text:#0D0D0D;
   --text-mid:#6B6560;
   --text-dim:#B0AA9F;
-  --red:#E63946;
-  --red-dim:rgba(230,57,70,0.10);
+  --red:#0452fd;
+  --red-dim:rgba(4,82,253,0.10);
   --border:rgba(13,13,13,0.08);
   --syne:'Plus Jakarta Sans',sans-serif;
   --inter:'Inter',sans-serif;
@@ -60,7 +60,7 @@ section{min-height:100vh;position:relative}
 #cur-ring{
   position:fixed;top:0;left:0;z-index:9998;
   width:40px;height:40px;
-  border:1px solid rgba(230,57,70,0.4);
+  border:1px solid rgba(4,82,253,0.4);
   border-radius:50%;
   pointer-events:none;
   transform:translate(-50%,-50%);
@@ -70,20 +70,54 @@ body.hovering #cur{width:50px;height:50px;border-radius:50%;background:var(--red
 /* ─── LOADER ─── */
 #loader{
   position:fixed;inset:0;z-index:10000;
-  background:var(--bg);
+  background:#0D0D0D;
   display:flex;align-items:center;justify-content:center;
-  transition:background .3s;
-}
-.loader-text{
-  font-family:var(--syne);
-  font-size:clamp(4rem,12vw,10rem);
-  font-weight:800;
-  letter-spacing:-.03em;
-  color:var(--text);
   overflow:hidden;
 }
-.loader-text span{display:inline-block;transform:translateY(110%)}
-.loader-bar{position:absolute;bottom:0;left:0;height:2px;width:0%;background:var(--red)}
+
+/* Photo */
+.loader-photo-wrap{
+  position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;
+  z-index:1;
+}
+.loader-photo{
+  width:min(280px,55vw);height:min(280px,55vw);
+  object-fit:cover;object-position:top center;
+  border-radius:50%;
+  opacity:0;
+  filter:grayscale(1) contrast(1.08) brightness(.9);
+  will-change:opacity,transform;
+}
+
+/* Arcs — cercles qui s'élargissent depuis chaque bord */
+.loader-arc-left,
+.loader-arc-right{
+  position:absolute;inset:0;
+  background:#F7F4EF;
+  z-index:2;
+}
+.loader-arc-left{
+  clip-path:circle(0% at 0% 50%);
+}
+.loader-arc-right{
+  clip-path:circle(0% at 100% 50%);
+}
+
+/* DRH */
+.loader-drh{
+  position:absolute;
+  display:flex;align-items:flex-end;
+  font-family:var(--syne);
+  font-size:clamp(8rem,22vw,22rem);
+  font-weight:800;letter-spacing:-.04em;
+  color:#0D0D0D;line-height:.9;
+  z-index:3;will-change:opacity;
+}
+.loader-drh-clip{overflow:hidden;padding-bottom:.06em}
+.loader-drh-clip span{display:block;transform:translateY(110%);will-change:transform}
+
+.loader-bar{position:absolute;bottom:0;left:0;height:2px;width:0%;background:var(--red);z-index:4}
 
 /* ─── GRAIN OVERLAY ─── */
 #grain{
@@ -124,4 +158,19 @@ body.hovering #cur{width:50px;height:50px;border-radius:50%;background:var(--red
   letter-spacing:-.03em;
   line-height:1.2;
   padding-bottom:.05em;
+}
+
+/* ─── SCROLLBAR CUSTOM ─── */
+#custom-scrollbar{
+  position:fixed;right:14px;top:64px;bottom:0;
+  z-index:9000;display:flex;flex-direction:column;
+  gap:2px;align-items:flex-end;justify-content:center;
+  pointer-events:all;cursor:pointer;
+}
+#custom-scrollbar .csb-tick{
+  width:12px;height:1.5px;background:var(--text-dim);opacity:.2;
+  transition:opacity .12s,background .12s;
+}
+#custom-scrollbar .csb-tick.active{
+  background:var(--red);opacity:1;
 }
