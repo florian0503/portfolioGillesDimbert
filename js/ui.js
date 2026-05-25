@@ -35,7 +35,7 @@ loaderTl
   /* — Phase 2 : arcs circulaires s'élargissent en même temps — */
   .to(['#arcLeft','#arcRight'],{
     clipPath:(i)=>i===0?'circle(150% at 0% 50%)':'circle(150% at 100% 50%)',
-    duration:1.4,ease:'power2.inOut'
+    duration:1.9,ease:'power2.inOut'
   }, 1.2)
 
   /* — Phase 3 : DRH se révèle lettre par lettre — */

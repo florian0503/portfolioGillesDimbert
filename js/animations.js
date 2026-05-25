@@ -27,23 +27,7 @@ gsap.to('.hero-bg-text',{
 /* ─── PITCH HEADLINE — mots qui s'allument ─── */
 const pitchText = "DRH opérationnel intervenant en management de transition ou en CDI, j'accompagne les dirigeants confrontés à des décisions sociales sensibles et à des contextes organisationnels complexes.";
 const pitchEl   = document.getElementById('pitchHeadline');
-const pitchWords = pitchText.split(' ');
-pitchEl.innerHTML = pitchWords.map(w=>`<span class="pitch-word">${w} </span>`).join('');
-const pitchWordEls = pitchEl.querySelectorAll('.pitch-word');
-
-if(window.innerWidth > 900){
-  ScrollTrigger.create({
-    trigger:'#pitch', start:'top 64px',
-    end:`+=${pitchWordEls.length * 40}`,
-    pin:true, pinSpacing:true, scrub:1.2,
-    onUpdate(self){
-      const litCount = Math.floor(self.progress * pitchWordEls.length);
-      pitchWordEls.forEach((w,i) => w.classList.toggle('lit', i < litCount));
-    }
-  });
-} else {
-  pitchWordEls.forEach(w => w.classList.add('lit'));
-}
+pitchEl.textContent = pitchText;
 
 /* ─── TEXT REVEAL — section titles ─── */
 function initTextReveal(){
@@ -83,12 +67,16 @@ const expBigTitle  = document.getElementById('expBigTitle');
 const expBigNum    = document.getElementById('expBigNum');
 const expIdxEl     = document.getElementById('expIdx');
 const expProgBarEl = document.getElementById('expProgBar');
+const expLeftImg   = document.getElementById('expLeftImg');
 let expCurrentIdx  = -1;
 
+const expImages = ['img/exp-negociation.jpg','img/exp-transformation.jpg','img/exp-pilotage.jpg','img/exp-modernisation.jpg'];
+
 // Lecture dynamique des données depuis le DOM
-const expData = Array.from(expPinCards).map(card => ({
+const expData = Array.from(expPinCards).map((card,i) => ({
   num:   card.querySelector('.epc-num')?.textContent  ?? '',
   title: card.querySelector('.epc-title')?.textContent ?? '',
+  img:   expImages[i] ?? '',
 }));
 const expTotal = String(expData.length).padStart(2,'0');
 
@@ -102,6 +90,7 @@ function updateExpLeft(i){
       expBigNum.textContent   = d.num;
       expBigTitle.textContent = d.title;
       expIdxEl.textContent    = `${d.num} / ${expTotal}`;
+      if(expLeftImg && d.img) expLeftImg.src = d.img;
       gsap.to([expBigTitle,expBigNum],{opacity:1,y:0,duration:.35,ease:'power2.out'});
     }
   });
