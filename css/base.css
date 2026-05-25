@@ -2,14 +2,15 @@
    BASE — variables, reset, global
 ═══════════════════════════════════════ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+strong,b{color:var(--red);font-weight:700}
 
 :root{
   --bg:#F7F4EF;
   --bg2:#EFECE7;
   --bg3:#E8E4DE;
   --text:#0D0D0D;
-  --text-mid:#6B6560;
-  --text-dim:#B0AA9F;
+  --text-mid:#2A2A2A;
+  --text-dim:#777777;
   --red:#0452fd;
   --red-dim:rgba(4,82,253,0.10);
   --border:rgba(13,13,13,0.08);
@@ -55,7 +56,7 @@ section{min-height:100vh;position:relative}
   pointer-events:none;
   transform:translate(-50%,-50%);
   transition:width .25s,height .25s,border-radius .25s;
-  mix-blend-mode:difference;
+  mix-blend-mode:normal;
 }
 #cur-ring{
   position:fixed;top:0;left:0;z-index:9998;
@@ -70,7 +71,7 @@ body.hovering #cur{width:50px;height:50px;border-radius:50%;background:var(--red
 /* ─── LOADER ─── */
 #loader{
   position:fixed;inset:0;z-index:10000;
-  background:#0D0D0D;
+  background:#030303;
   display:flex;align-items:center;justify-content:center;
   overflow:hidden;
 }
@@ -86,7 +87,7 @@ body.hovering #cur{width:50px;height:50px;border-radius:50%;background:var(--red
   object-fit:cover;object-position:top center;
   border-radius:50%;
   opacity:0;
-  filter:grayscale(1) contrast(1.08) brightness(.9);
+  filter:grayscale(1) contrast(1.08);
   will-change:opacity,transform;
 }
 
@@ -109,7 +110,7 @@ body.hovering #cur{width:50px;height:50px;border-radius:50%;background:var(--red
   position:absolute;
   display:flex;align-items:flex-end;
   font-family:var(--syne);
-  font-size:clamp(8rem,22vw,22rem);
+  font-size:clamp(6rem,16vw,16rem);
   font-weight:800;letter-spacing:-.04em;
   color:#0D0D0D;line-height:.9;
   z-index:3;will-change:opacity;
